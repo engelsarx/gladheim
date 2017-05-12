@@ -1,0 +1,1169 @@
+/// Unidad de medida.
+$alto-reticula: 20px;
+/// Settings footer.
+/// @type varios
+$footer-background: #EAEAEA !default;
+/// Settings topbar-fixed.
+/// @type varios
+$topbar-background: rgba(255, 255, 255, 0.8) !default;
+$topbar-color-text: $dark-gray !default;
+$topbar-height: auto !default;
+$topbar-height-logo: 68px;
+/// Settings Section.
+/// @type varios
+$section-padding: 20px 0 20px 0 !default;
+$section-padding-gray: $alto-reticula*1.5 0 $alto-reticula*3 0 !default;
+
+
+/*******************
+  Útiles
+*******************/
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center,
+.center-align {
+    text-align: center;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.x {
+    border: thin solid red;
+}
+
+.y {
+    background-color: pink;
+}
+
+.delay1{
+    animation-delay: 1s;
+}
+
+.delay2{
+    animation-delay: 2s;
+}
+
+.delay3{
+    animation-delay: 3s;
+}
+
+.delay4{
+    animation-delay: 4s;
+}
+
+.delay5{
+    animation-delay: 5s;
+}
+
+.ampliador {
+    height: 70vh;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.reset-margin{
+    margin: 0 !important;
+}
+
+.space-blank {
+    border-bottom: 1px solid transparent;
+    margin: 5px;
+    clear: both;
+    &.diez {
+        margin: 10px;
+    }
+    &.veinte {
+        margin: 20px;
+    }
+    &.veinticinco {
+        margin: 25px;
+    }
+    &.treinta {
+        margin: 30px;
+    }
+    &.cuarenta {
+        margin: 40px;
+    }
+    &.cincuenta {
+        margin: 50px;
+    }
+}
+
+.space-line {
+    margin: $alto-reticula*2 auto;
+    &.sinMargen {
+        margin: 0;
+    }
+    &.blanco {
+        border-bottom: 1px solid $white;
+    }
+    &.gris {
+        border-bottom: 1px solid $medium-gray;
+    }
+    &.primary {
+        border-bottom: 1px solid $primary-color;
+    }
+}
+
+.subrayado {
+    margin: $alto-reticula/2 auto $alto-reticula*2 auto;
+    &.blanco {
+        border-bottom: 1px solid $white;
+    }
+    &.gris {
+        border-bottom: 1px solid $medium-gray;
+    }
+    &.primary {
+        border-bottom: 1px solid $primary-color;
+    }
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+.padding-0 {
+    padding: 0 !important;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-bottom {
+    margin-top: $alto-reticula !important;
+    margin-bottom: $alto-reticula !important;
+}
+
+.margin-bottom {
+    margin-bottom: $alto-reticula !important;
+}
+
+.margin-bottom-mitad {
+    margin-bottom: $alto-reticula/2 !important;
+}
+
+.margin-bottom-30 {
+    margin-bottom: $alto-reticula*1.5 !important;
+}
+
+section {
+    &.margin-40 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.display-flex {
+    display: flex !important;
+    display: -ms-flexbox;
+    &.space-around {
+        justify-content: space-around;
+        -ms-flex-pack: distribute;
+    }
+    &.space-between {
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+    }
+    &.centered {
+        justify-content: center;
+        -ms-flex-pack: center;
+    }
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+    &.vertical-center {
+        align-items: center;
+        -ms-flex-align: center;
+    }
+    &.baseline {
+        align-items: baseline;
+        -ms-flex-align: end;
+    }
+    &.flex-end {
+        justify-content: flex-end;
+        -ms-flex-pack: end;
+    }
+}
+
+.posicion-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.input-border-0 {
+    input {
+        border: 0;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.clear {
+    clear: both;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.texto-normal {
+    font-weight: normal !important;
+}
+
+.texto-bold {
+    font-weight: bold !important;
+}
+
+.texto-italic {
+    font-style: italic !important;
+}
+
+.texto-strike{
+    text-decoration: line-through;
+}
+
+.padding-row {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+.margin-row {
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+.padding-top-bottom {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.padding-row-left {
+    padding-left: 0.625rem;
+}
+
+.padding-row-right {
+    padding-right: 0.625rem;
+}
+
+.ocultar {
+    display: none;
+}
+
+.no-seleccionable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+/*
+medidas de iconos y texto
+*/
+
+.x1 {
+    font-size: 1rem !important;
+}
+
+.x2 {
+    font-size: 2rem !important;
+}
+
+.x3 {
+    font-size: 3rem !important;
+}
+
+.x4 {
+    font-size: 4rem !important;
+}
+
+.x5 {
+    font-size: 5rem !important;
+}
+
+.x6 {
+    font-size: 6rem !important;
+}
+
+.x7 {
+    font-size: 7rem !important;
+}
+
+.x8 {
+    font-size: 8rem !important;
+}
+
+.x9 {
+    font-size: 9rem !important;
+}
+
+.x10 {
+    font-size: 10rem !important;
+}
+
+img.logo-peque {
+    width: 35px;
+}
+
+img.logo-mediano {
+    width: 70px;
+}
+
+img.logo-grande {
+    width: 100px;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+/*******************
+  Sombras
+*******************/
+
+.z-depth-0 {
+  box-shadow: none !important;
+}
+.z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.z-depth-1-half {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+.z-depth-2 {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+.z-depth-3 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+.z-depth-4 {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+.z-depth-5 {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/*******************
+  Texto color
+*******************/
+
+.texto-blanco {
+    color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-blanco {
+        color: $white !important;
+    }
+}
+
+.texto-negro {
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-negro {
+        color: $black !important;
+    }
+}
+
+.texto-gris {
+    color: $dark-gray !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-gris {
+        color: $dark-gray !important;
+    }
+}
+
+.texto-primary {
+    color: $primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-primary {
+        color: $primary-color !important;
+    }
+}
+
+/*******************
+  Subtitulos headings
+*******************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .subtitulo {
+        display: block;
+        font-size: 60%;
+        color: $medium-gray;
+        font-weight: normal;
+    }
+}
+
+/*******************
+  line-height-custom
+*******************/
+
+.line-height-1 {
+    line-height: 1;
+}
+
+
+/*******************
+  Background colores
+*******************/
+
+.background-blanco {
+    background-color: $white;
+    color: color-pick-contrast($white);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color-pick-contrast($white);
+    }
+    a {
+        color: color-pick-contrast($white);
+        border-bottom: 1px solid transparent;
+        @include transition(all ease 400ms);
+        &:hover {
+            color: color-pick-contrast($white);
+            border-bottom: 1px solid color-pick-contrast($white);
+        }
+    }
+    i {
+        &.gigante {
+            font-size: 5rem;
+            line-height: 5.5rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            &.circular {
+                color: $white;
+                font-size: 4rem;
+                background-color: color-pick-contrast($white);
+                border-radius: 50%;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.background-gris {
+    background-color: $medium-gray !important;
+    color: color-pick-contrast($medium-gray) !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color-pick-contrast($medium-gray);
+    }
+    a {
+        color: color-pick-contrast($medium-gray);
+        border-bottom: 1px solid transparent;
+        @include transition(all ease 400ms);
+        &:hover {
+            color: color-pick-contrast($medium-gray);
+            border-bottom: 1px solid color-pick-contrast($medium-gray);
+        }
+    }
+    i {
+        &.gigante {
+            font-size: 5rem;
+            line-height: 5.5rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            &.circular {
+                color: $medium-gray;
+                font-size: 4rem;
+                background-color: color-pick-contrast($medium-gray);
+                border-radius: 50%;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.background-primary {
+    background-color: $primary-color;
+    color: color-pick-contrast($primary-color);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color-pick-contrast($primary-color);
+        @include breakpoint(small only) {
+            font-size: 200%;
+        }
+    }
+    a {
+        color: color-pick-contrast($primary-color);
+        border-bottom: 1px solid transparent;
+        @include transition(all ease 400ms);
+        &:hover {
+            color: color-pick-contrast($primary-color);
+            border-bottom: 1px solid color-pick-contrast($primary-color);
+        }
+    }
+    i {
+        &.gigante {
+            font-size: 5rem;
+            line-height: 5.5rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            &.circular {
+                color: $primary-color;
+                font-size: 4rem;
+                background-color: color-pick-contrast($primary-color);
+                border-radius: 50%;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+/*******************
+  HEADER
+*******************/
+
+.imagen-header {
+    position: relative;
+    .imagen1 {
+        background-image: url(../images/slider/transportacion-importacion-exportacion.jpg);
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        height: 450px;
+        width: 100%;
+        @include breakpoint(small only) {
+            background-position: 30% 0;
+            height: 250px;
+            background-size: cover;
+        }
+    }
+    .imagen2 {
+        background-image: url(../images/slider/transportacion-importacion-exportacion.jpg);
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        height: 450px;
+        width: 100%;
+        @include breakpoint(small only) {
+            background-position: 30% 0;
+            height: 250px;
+            background-size: cover;
+        }
+    }
+}
+
+/*******************
+  NAVBAR
+*******************/
+
+.topbar-fixed {
+    position: fixed;
+    height: $topbar-height;
+    width: 100%;
+    z-index: 998;
+    color: $topbar-color-text;
+    padding: $alto-reticula 0;
+    @include transition(all ease 400ms);
+    &.stick {
+        top: 0;
+        padding: 0;
+    }
+    .contenedor-elementos-topbar {
+        .logo {}
+        .right-section {
+            position: relative;
+        }
+    }
+}
+
+.topbar-relative {
+    position: relative;
+    height: $topbar-height;
+    width: 100%;
+    z-index: 998;
+    background-color: $topbar-background;
+    color: $topbar-color-text;
+    padding: $alto-reticula 0;
+    &.stick {
+        top: 0;
+    }
+    .contenedor-elementos-topbar {
+        .logo {}
+        .right-section {
+            position: relative;
+        }
+    }
+}
+
+
+/*******************
+  Footer
+*******************/
+
+footer {
+    position: relative;
+}
+
+.footer-base {
+    background-color: $footer-background;
+    padding: 32px 0 24px 0;
+    color: $dark-gray;
+    font-size: 14px;
+    @include breakpoint(medium only) {
+        text-align: center;
+    }
+    img {
+        width: 150px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color-pick-contrast($footer-background);
+    }
+    a {
+        color: color-pick-contrast($footer-background);
+        border-bottom: 1px solid transparent;
+        @include transition(all ease 400ms);
+        &:hover {
+            color: color-pick-contrast($footer-background);
+            border-bottom: 1px solid color-pick-contrast($footer-background);
+        }
+    }
+    &__legales {
+        height: 72px;
+        display: flex;
+        align-items: flex-end;
+        p {
+            line-height: 1;
+            width: 100%;
+            text-align: right;
+        }
+        a {
+            margin: 0 4px;
+        }
+    }
+}
+
+/***********
+Skip
+************/
+
+.skip {
+    animation: Skip-slide ease-out 1.4s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards;
+    /*when the spec is finished*/
+    -webkit-animation: Skip-slide ease-out 1.4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-fill-mode: forwards;
+    /*Chrome 16+, Safari 4+*/
+    -moz-animation: Skip-slide ease-out 1.4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -moz-animation-fill-mode: forwards;
+    /*FF 5+*/
+    -o-animation: Skip-slide ease-out 1.4s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -o-animation-fill-mode: forwards;
+    /*Not implemented yet*/
+    -ms-animation: Skip-slide ease-out 1.4s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+    -ms-animation-fill-mode: forwards;
+    /*IE 10+*/
+}
+
+@keyframes Skip-slide {
+    0% {
+        transform: translate(0px, -1px);
+    }
+    49% {
+        transform: translate(-0px, -8px);
+    }
+    100% {
+        transform: translate(0px, -1px);
+    }
+}
+
+@-moz-keyframes Skip-slide {
+    0% {
+        -moz-transform: translate(0px, -1px);
+    }
+    49% {
+        -moz-transform: translate(-0px, -8px);
+    }
+    100% {
+        -moz-transform: translate(0px, -1px);
+    }
+}
+
+@-webkit-keyframes Skip-slide {
+    0% {
+        -webkit-transform: translate(0px, -1px);
+    }
+    49% {
+        -webkit-transform: translate(-0px, -8px);
+    }
+    100% {
+        -webkit-transform: translate(0px, -1px);
+    }
+}
+
+@-o-keyframes Skip-slide {
+    0% {
+        -o-transform: translate(0px, -1px);
+    }
+    49% {
+        -o-transform: translate(-0px, -8px);
+    }
+    100% {
+        -o-transform: translate(0px, -1px);
+    }
+}
+
+@-ms-keyframes Skip-slide {
+    0% {
+        -ms-transform: translate(0px, -1px);
+    }
+    49% {
+        -ms-transform: translate(-0px, -8px);
+    }
+    100% {
+        -ms-transform: translate(0px, -1px);
+    }
+}
+
+/***********
+RANGE SLIDER
+************/
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+
+ .noUi-target,
+ .noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    /* Fix 401 */
+}
+
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.noUi-handle {
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-stacking .noUi-handle {
+    /* This class is applied to the lower origin when
+   its values is > 50%. */
+   z-index: 10;
+}
+
+.noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+
+ .noUi-base,
+ .noUi-handle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* Slider size and handle placement;
+ */
+
+ .noUi-horizontal {
+    height: 6px;
+    margin-top: 30px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -10px;
+    top: -7px;
+}
+
+.noUi-vertical {
+    width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+    width: 28px;
+    height: 34px;
+    left: -6px;
+    top: -17px;
+}
+
+
+/* Styling;
+ */
+
+ .noUi-background {
+    background: $light-gray;
+}
+
+.noUi-connect {
+    background: $primary-color;
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+
+.noUi-origin {
+    border-radius: 0px;
+}
+
+.noUi-target {
+    border-radius: 0px;
+    border: 0px solid #D3D3D3;
+    font-size: 0.8rem;
+}
+
+.noUi-target.noUi-connect {}
+
+
+/* Handles and cursors;
+ */
+
+ .noUi-draggable {
+    cursor: w-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: n-resize;
+}
+
+.noUi-handle {
+    background: $primary-color;
+    cursor: pointer;
+}
+
+.noUi-active {}
+
+.noUi-handle:after {
+    left: 17px;
+}
+
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+    width: 14px;
+    height: 1px;
+    left: 6px;
+    top: 14px;
+}
+
+.noUi-vertical .noUi-handle:after {
+    top: 17px;
+}
+
+
+/* Disabled state;
+ */
+
+ [disabled].noUi-connect,
+ [disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/* Base;
+ *
+ */
+
+ .noUi-pips,
+ .noUi-pips * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-pips {
+    position: absolute;
+    color: #999;
+}
+
+
+/* Values;
+ *
+ */
+
+ .noUi-value {
+    position: absolute;
+    text-align: center;
+}
+
+.noUi-value-sub {
+    color: #ccc;
+    font-size: 10px;
+}
+
+
+/* Markings;
+ *
+ */
+
+ .noUi-marker {
+    position: absolute;
+    background: #CCC;
+}
+
+.noUi-marker-sub {
+    background: #AAA;
+}
+
+.noUi-marker-large {
+    background: #AAA;
+}
+
+
+/* Horizontal layout;
+ *
+ */
+
+ .noUi-pips-horizontal {
+    padding: 10px 0;
+    height: 80px;
+    top: -47px;
+    left: 0;
+    width: 100%;
+}
+
+.noUi-value-horizontal {
+    -webkit-transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, 50%, 0);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+    height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 15px;
+    display: none;
+}
+
+
+/* Vertical layout;
+ *
+ */
+
+ .noUi-pips-vertical {
+    padding: 0 10px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.noUi-value-vertical {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    padding-left: 25px;
+}
+
+.noUi-marker-vertical.noUi-marker {
+    width: 5px;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+    width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+    width: 15px;
+}
+
+.noUi-tooltip {
+    display: block;
+    position: absolute;
+    border-radius: 3px;
+    background: $light-gray;
+    padding: 5px;
+    text-align: center;
+}
+
+.noUi-horizontal .noUi-handle-lower .noUi-tooltip {
+    top: -32px;
+}
+
+.noUi-horizontal .noUi-handle-upper .noUi-tooltip {
+    bottom: -32px;
+}
+
+.noUi-vertical .noUi-handle-lower .noUi-tooltip {
+    left: 120%;
+}
+
+.noUi-vertical .noUi-handle-upper .noUi-tooltip {
+    right: 120%;
+}
+
+
+/***********
+Address
+************/
+
+address {
+    font-style: normal;
+}
+
+/***********
+InputFile
+************/
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/***********
+Estilos especiales para firefox y IE
+************/
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+@media screen and (min-width:0\0) {
+    /* Tus estilos CSS para IE9, IE10, IE11  */
+}
+
+@-moz-document url-prefix() {
+
+}
+
+
+/***********
+Termina custom
+************/
+

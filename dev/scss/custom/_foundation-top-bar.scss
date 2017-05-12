@@ -1,0 +1,117 @@
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group top-bar
+////
+
+/// Padding for the top bar.
+/// @type Number
+$topbar-padding: 0 !default;
+
+/// Background color for the top bar. This color also cascades to menus within the top bar.
+/// @type Color
+$topbar-background-color: rgba(255, 255, 255, 0.9) !default;
+
+/// Color de la tipografía
+/// @type Color
+$topbar-color: $primary-color !default;
+
+/// Spacing for the top bar title.
+/// @type Number
+$topbar-title-spacing: 1rem !default;
+
+/// Alto top-bar
+/// @type Numero
+$topbar-height: 70px !default;
+
+/// Alto top-bar cuando se navega hacia abajo
+/// @type Numero
+$topbar-height-scrolled: 56px !default;
+
+/// Width of `<input>` elements inside the top bar.
+/// @type Number
+$topbar-input-width: 200px !default;
+
+/// Adds styles for a top bar container.
+@mixin top-bar-container {
+  @include clearfix;
+  padding: $topbar-padding;
+
+  &,
+  ul {
+    color: $topbar-color;
+    z-index: 1;
+    @include transition(line-height ease 400ms);
+      &.scrolled {
+          line-height: $topbar-height-scrolled;
+      }
+  }
+
+  input {
+    width: $topbar-input-width;
+    margin-#{$global-right}: 1rem;
+  }
+
+  // scss-lint:disable QualifyingElement
+  input.button {
+    width: auto;
+  }
+}
+
+/// makes sections stacked
+@mixin top-bar-stacked {
+  // Sub-sections
+  .top-bar-title {
+    width: 100%;
+  }
+
+  .top-bar-right {
+    width: 100%;
+  }
+
+  .top-bar-left {
+    width: 100%;
+  }
+}
+
+@mixin foundation-top-bar {
+  // Top bar container
+  .top-bar {
+    @include top-bar-container;
+    line-height: inherit;
+  }
+
+  // Generate classes for stacking on each screen size (defined in $breakpoint-classes)
+  @each $size in $breakpoint-classes {
+    .stacked-for-#{$size} {
+      @include breakpoint($size down) {
+        @include top-bar-stacked;
+      }
+    }
+  }
+
+  // Stack on small screens as default
+  @include breakpoint(small only) {
+    @include top-bar-stacked;
+  }
+
+  // Sub-sections
+  .top-bar-title {
+    float: left;
+    margin-right: $topbar-title-spacing;
+    display: inline-table;
+      &.scrolled {
+          line-height: $topbar-height-scrolled;
+          @include transition(line-height ease 400ms);
+      }
+  }
+  .top-bar-left {
+    float: left;
+  }
+
+  .top-bar-right {
+    float: right;
+  }
+}
