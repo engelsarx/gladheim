@@ -4,7 +4,7 @@
 
 .nav-wrapper {
     &__menu {
-        background-color: $white;
+        background-color: rgba(255, 255, 255, 0.6);
         height: 80px;
         border-radius: $global-radius;
         display: flex;
@@ -29,13 +29,60 @@
         }
     }
     &__logo {
-        padding: 0 16px;
+        padding: 0 32px 0 12px;
+        @include breakpoint(1220 down) {
+            padding: 0 8px 0 0px;
+        }
         img {
-            width: 140px;
+            width: 164px;
             @include transition(width 400ms ease);
             @include breakpoint(medium down) {
-                width: 120px;
+                width: 146px;
             }
+        }
+        @include breakpoint(medium down) {
+            padding: 0;
+            margin: 0 12px 0 auto;
+        }
+    }
+    &__otroslinks {
+        display: flex;
+        align-items: center;
+        margin-left: auto !important;
+        li {
+            a {
+                font-weight: 500 !important;
+                font-size: 16px !important;
+                margin: 0 21px !important;
+                @include breakpoint(1140 down) {
+                    margin: 0 8px !important;
+                    font-size: 14px !important;
+                }
+                @include breakpoint(medium down) {
+                    margin: 0 12px !important;
+                    font-size: 24px !important;
+                    i {
+                        margin-right: 0 !important;
+                        font-size: 24px !important;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    @include breakpoint(medium down) {
+                        margin: 0 0 0 12px !important;
+                    }
+                }
+            }
+        }
+        @include breakpoint(medium down) {
+            margin-left: 0 !important;
+        }
+    }
+    .column, .columns {
+        @include breakpoint(small only) {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;    
         }
     }
 }
@@ -44,9 +91,10 @@
     list-style: none;
     position: relative;
     margin: 0;
-    line-height: 26px;
+    line-height: 34px;
     .button {
         margin-bottom: 0;
+        margin-left: 7px;
     }
 }
 
@@ -57,10 +105,21 @@
     font-size: 14px;
     border-bottom: 2px solid transparent;
     padding: 0;
-    margin: 0 16px;
+    margin: 2px 16px 0 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
     @include transition(all ease 400ms);
     &:hover {
         border-bottom: 2px solid $primary-color;
+    }
+    &.active {
+        border-bottom: 2px solid $primary-color;
+    }
+    @include breakpoint(1220 down) {
+        margin: 2px 8px 0 8px;
+    }
+    @include breakpoint(1140 down) {
+        margin: 2px 4px 0 4px;
     }
 }
 
@@ -73,7 +132,7 @@
         i {
             font-size: 1rem;
             display: inline-block;
-            margin-left: 0.5rem;
+            margin-right: 8px;
         }
     }
     @include breakpoint(small only) {
