@@ -1,0 +1,91 @@
+.side-nav {
+    background-color: $black;
+    width: calc(100% - 56px);
+    overflow: visible;
+    padding: 0;
+    &__contenedor-elementos {
+        height: 100%;
+        padding-top: 8px;
+    }
+    &__menu {
+        text-transform: uppercase;
+        margin-left: 0;
+        li {
+            padding-left: 40px;
+            a {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 48px;
+                border-bottom: 1px solid $secondary-color;
+                margin: 0;
+                padding: 0 16px 0 0;
+                color: $white;
+                &:hover {
+                    border-bottom: 1px solid $secondary-color;
+                }
+                &:visited {
+                    color: $white;
+                }
+            }
+            &:last-child() {
+                a {
+                    border-bottom: 1px solid transparent;
+                }
+            }
+        }
+    }
+    &__boton-sideNav {
+        height: 56px;
+        position: absolute;
+        right: -56px;
+        top: 16px;
+        line-height: 15px;
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            opacity: 1;
+        }
+    }
+    &__registro {
+        padding: 0 40px 0 40px;
+        position: absolute;
+        bottom: 64px;
+        color: $white;
+        p {
+            color: $dark-gray;
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &.stick {
+        &__boton-sideNav {
+            top: 0;
+        }
+    }
+}
+
+.stick {
+    .side-nav {
+        &__boton-sideNav {
+            top: 0;
+        }
+    }  
+}
+
+#sidenav-overlay {
+    background-color: rgba(0,0,0,.8);
+}
+
+.hamburger--spin {
+    .hamburger-inner {
+        width: 20px;    
+    }
+    &.is-active {
+        right: -56px;
+        top: 0;
+        .hamburger-inner {
+            width: 24px;
+        }
+    }
+}

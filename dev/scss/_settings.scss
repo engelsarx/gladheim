@@ -46,12 +46,12 @@
 // 1. Global
 // ---------
 
-$global-font-size: 95%;
-$global-width: rem-calc(1200);
+$global-font-size: 100%;
+$global-width: rem-calc(1248);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #213d73,
-  secondary: #767676,
+  secondary: #94b7dd,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37
@@ -82,7 +82,7 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
+  large: 1025px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
@@ -95,8 +95,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: 32px,
+  medium: 16px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -132,7 +132,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;

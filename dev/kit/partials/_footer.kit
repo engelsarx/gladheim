@@ -1,75 +1,58 @@
 <footer class="site-footer">
-        <div id="cuatro" class="footer-base">
-            <div class="line7">
-			<div class="container">
-				<div class="row footer">
-					<div class="col-md-12">
-						<h3>Suscríbete a nuestro boletín de noticias</h3>
-						<p>Aprovecha y recibe en tu email nuestras promociones y noticias.</p>
-						<div class="fr">
-						<div style="display: inline-block;">
-                        <form  method="post" action="newsletter-esp.php" id="newsletter">
-                        
-                        <input type="email" class="col-md-6 fEmail" name='email' id='email' placeholder='Ingresa tu email'/>
-                        <input value="Suscríbete!" class="subS" id="submit" name="Submit" type="submit">
-                            </form>
-							
-						</div>
-						</div>
-					</div>
-					<div class="soc col-md-12">
-						<ul>
-							<li class="soc1"><a href="https://www.linkedin.com/company/gladheim-logistics-s-a-de-c-v-" target="_new"></a></li><!--
-							<li class="soc2"><a href="#"></a></li>
-							<li class="soc3"><a href="#"></a></li>
-							<li class="soc4"><a href="#"></a></li>
-							<li class="soc5"><a href="#"></a></li>
-							<li class="soc6"><a href="#"></a></li>
-							<li class="soc7"><a href="#"></a></li>
-							<li class="soc8"><a href="#"></a></li>-->
-							
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="lineBlack">
-			<div class="container">
-				<div class="row downLine">
-					<div class="col-md-12 text-right">
-						<!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
-						
-					</div>
-					<div class="col-md-6 text-left copy">
-						<p>Todos los derechos reservados por Gladheim Logistics. </p>
-					</div>
-					<div class="col-md-6 text-right dm">
-						<ul id="downMenu">
-							<li class="active" ><a href="#home">Inicio</a></li>
-							<li><a href="#nosotros">Nosotros</a></li>
-							<li><a href="#filosofia">Filosofía</a></li>
-							<li><a href="#servicios">Servicios</a></li>
-							<li class="last"><a href="#contact">Contacto</a></li>
-							<!--li><a href="#features">Features</a></li-->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-    </div>		
-		
+  <div class="footer-base">
+    <div class="row footer-base__bloque-elementos">
+      <section class="small-12 medium-6 large-5 columns">
+        <ul class="small-12 medium-12 large-5 columns custom-list">
+          <li>
+            <h6 class="texto-bold">Gladheim Logistics</h6>
+          </li>
+          <li>
+			<a class="active" href="#inicio" title="Ir a inicio">Inicio</a>
+		</li>
+		<li>
+			<a href="#nosotros" title="Quiénes somos">Nosotros</a>
+		</li>
+		<li>
+			<a href="#filosofia" title="Nuestra filosofía">Filosofía</a>
+		</li>
+		<li>
+			<a href="#servicios" title="Nuestros servicios">Servicios</a>
+		</li>
+		<li>
+			<a href="#contacto" title="Contacta con nosotros">Contacto</a>
+		</li>
+        </ul>
+      </section>
+      <section class="small-12 medium-6 large-4 columns">
+        <div class="footer-base__contenedor-blanco">
+          <button data-target="modal-user" class="button">Suscríbete ahora</button>
+          <p>Aprovecha y recibe en tu email nuestras promociones y noticias.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div class="space-blank"></div>
+    <div class="space-line gris-claro veinte hide-for-medium"></div>
+    <section class="row">
+      <div class="footer-base__legales small-12">
+        <p>Gladheim Logistics 2017 - Todos los derechos reservados
+          <a href="#" title="Política de privacidad">Política de privacidad</a>
+        </p>
+      </div>
+    </section>
+  </div>
 </footer>
 
 <!--build:js js/main.min.js -->
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/materialize/dist/js/materialize.js"></script>
-    <script src="js/lib/owl.carousel/dist/owl.carousel.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/utilities.js"></script>
-    
-	<script>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/materialize/dist/js/materialize.js"></script>
+<script src="js/lib/owl.carousel/dist/owl.carousel.js"></script>
+<script src="js/app.js"></script>
+<script src="js/global.js"></script>
+<script src="js/main.js"></script>
+<script src="js/utilities.js"></script>
+<!--endbuild-->
+<script>
 			$(document).ready(function(){
 			$(".bhide").click(function(){
 				$(".hideObj").slideDown();
@@ -180,14 +163,14 @@
 				return false;
 			});
 		});		
-	</script>	
-<!--endbuild-->
-
+	</script>
 <script>
-(function() {
+  (function () {
     App.init();
-}());
+  }());
+
 </script>
 </body>
 
 </html>
+

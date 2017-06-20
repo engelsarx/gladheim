@@ -3,15 +3,17 @@ CARRUSEL
 ************/
 
 .carrusel {
-    max-height: 500px;
+    max-height: 100vh;
     overflow: hidden;
+    &--servicios {
+        max-height: 600px;
+    }
     .carrusel-header {
         position: initial;
-        .texto {
+        &__description {
             position: absolute;
             top: 50%;
-            width: 90%;
-            margin: 0 5%;
+            width: 100%;
             opacity: 0;
             left: 50%;
             @include transform(translateY(-50%));
@@ -20,22 +22,59 @@ CARRUSEL
                 opacity: 1;
                 left: 0;
             }
+            h1 {
+                color: white;
+                text-transform: uppercase;
+                font-size: 34px;
+                line-height: 28px;
+                text-shadow: 1px 1px 3px black;
+                strong {
+                color: $secondary-color;
+                }
+                .sub {
+                    font-size: 20px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .carrusel-servicios {
+        position: relative;
+        &.owl-carousel .owl-item .item {
+            height: 600px;
+            .servicio {
+                display: flex;
+                align-items: center;
+                padding: 60px 100px;
+                font-size: 14px;
+                img {
+                    height: 200px;
+                    display: inline-block;
+                    margin-right: 40px;
+                }
+                .description {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
 
 .owl-carousel .owl-item .item{
-    height: 500px;
-    img ~ .texto {
-      color: white;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: auto;
+        max-width: initial;
+        height: 100%;
     }
-    @include breakpoint(small only) {
-        overflow: hidden;
-        img {
-            width: auto;
-            max-width: initial;
-            height: 100%;
-        }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -93,14 +132,14 @@ CARRUSEL
     text-shadow: none;
 }
 
-.carrusel .owl-controls .owl-dots {
+.carrusel .owl-dots {
     position: absolute;
-    bottom: -250px;
+    bottom: 0;
     left: 50%;
     @include transform(translateX(-50%));
 }
 
-.carrusel .owl-controls .owl-dots .owl-dot{
+.carrusel .owl-dots .owl-dot{
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -113,7 +152,7 @@ CARRUSEL
     border-radius: 50%;
 }
 
-.carrusel .owl-controls .owl-dots .owl-dot:hover {
+.carrusel .owl-dots .owl-dot:hover {
     /*height: 12px;
     width: 12px;
     background-color: transparent;
@@ -121,7 +160,7 @@ CARRUSEL
     margin: -1px 5px;*/
 }
 
-.carrusel .owl-controls .owl-dots .owl-dot.active {
+.carrusel .owl-dots .owl-dot.active {
     height: 12px;
     width: 12px;
     background-color: $primary-color;

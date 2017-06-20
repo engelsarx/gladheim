@@ -443,6 +443,21 @@ h6 {
     }
 }
 
+.texto-secondary {
+    color: $secondary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-secondary {
+        color: $secondary-color !important;
+    }
+}
+
 /*******************
   Subtitulos headings
 *******************/
@@ -587,6 +602,45 @@ h6 {
         }
     }
 }
+.background-secondary {
+    background-color: $secondary-color;
+    color: color-pick-contrast($secondary-color);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color-pick-contrast($secondary-color);
+        @include breakpoint(small only) {
+            font-size: 200%;
+        }
+    }
+    a {
+        color: color-pick-contrast($secondary-color);
+        border-bottom: 1px solid transparent;
+        @include transition(all ease 400ms);
+        &:hover {
+            color: color-pick-contrast($secondary-color);
+            border-bottom: 1px solid color-pick-contrast($secondary-color);
+        }
+    }
+    i {
+        &.gigante {
+            font-size: 5rem;
+            line-height: 5.5rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            &.circular {
+                color: $secondary-color;
+                font-size: 4rem;
+                background-color: color-pick-contrast($secondary-color);
+                border-radius: 50%;
+                padding: 15px;
+            }
+        }
+    }
+}
 
 /*******************
   HEADER
@@ -594,32 +648,6 @@ h6 {
 
 .imagen-header {
     position: relative;
-    margin-top: -120px;
-    z-index: -1;
-    .imagen1 {
-        background-image: url(../images/slider/transportacion-importacion-exportacion.jpg);
-        background-position: 50% 0;
-        background-repeat: no-repeat;
-        height: 450px;
-        width: 100%;
-        @include breakpoint(small only) {
-            background-position: 30% 0;
-            height: 250px;
-            background-size: cover;
-        }
-    }
-    .imagen2 {
-        background-image: url(../images/slider/transportacion-importacion-exportacion.jpg);
-        background-position: 50% 0;
-        background-repeat: no-repeat;
-        height: 450px;
-        width: 100%;
-        @include breakpoint(small only) {
-            background-position: 30% 0;
-            height: 250px;
-            background-size: cover;
-        }
-    }
 }
 
 /*******************
@@ -631,15 +659,15 @@ h6 {
     height: $topbar-height;
     width: 100%;
     z-index: 998;
+    background-color: $topbar-background;
     color: $topbar-color-text;
     padding: $alto-reticula 0;
-    @include transition(all ease 400ms);
+    @include transition(all ease 200ms);
     &.stick {
         top: 0;
         padding: 0;
     }
     .contenedor-elementos-topbar {
-        .logo {}
         .right-section {
             position: relative;
         }
@@ -647,22 +675,78 @@ h6 {
 }
 
 .topbar-relative {
+    @include transition(all ease 0ms);    
+    @include transition(background-color ease 200ms);    
     position: relative;
     height: $topbar-height;
     width: 100%;
-    z-index: 998;
-    background-color: $topbar-background;
+    z-index: 996;
     color: $topbar-color-text;
-    padding: $alto-reticula 0;
+    padding: 16px 0 24px 0;
+    top: 0;
     &.stick {
         top: 0;
+        position: fixed;
+        @include transition(all ease 0ms);   
+        @include transition(background-color ease 200ms);    
+        background-color: $white;
+        padding: 0;
+        .nav-wrapper__menu {
+            padding-right:16px;
+            @include breakpoint(small only) {
+                padding-right: 16px;
+            }            
+            @include transition(all ease 200ms);    
+        }
+        .nav-wrapper__logo {
+            @include transition(all ease 200ms);    
+        }
     }
     .contenedor-elementos-topbar {
-        .logo {}
         .right-section {
             position: relative;
         }
     }
+    @include breakpoint(medium down) {
+        padding: 16px 0 18px 0;
+    }
+}
+
+.topbar-absolute {
+    @include transition(all ease 0ms);    
+    @include transition(background-color ease 200ms);    
+    position: absolute;
+    height: $topbar-height;
+    width: 100%;
+    z-index: 996;
+    color: $topbar-color-text;
+    padding: 16px 0 24px 0;
+    top: 0;
+    &.stick {
+        top: 0;
+        position: fixed;
+        @include transition(all ease 0ms);   
+        @include transition(background-color ease 200ms);    
+        background-color: $white;
+        padding: 0;
+        .nav-wrapper__menu {
+            padding-right:16px;
+            @include breakpoint(small only) {
+                padding-right: 16px;
+            }            
+            @include transition(all ease 200ms);    
+        }
+        .nav-wrapper__logo {
+            @include transition(all ease 200ms);    
+        }
+    }
+    @include breakpoint(medium down) {
+        padding: 16px 0 18px 0;
+    }
+}
+
+.topbar-helper {
+    width: 100%;
 }
 
 /*******************
@@ -670,8 +754,9 @@ h6 {
 *******************/
 
 .intro {
-    margin-top: -97px;
+    margin-top: -47px;
     z-index: 1;
+    position: absolute;
     &__lado-izquierdo,
     &__lado-derecho {
         position: relative;
@@ -738,6 +823,88 @@ h6 {
 }
 
 /*******************
+  NOSOTROS
+*******************/
+
+.contenedor-nosotros {
+    margin-top: 307px;
+    background-color: $primary-color;
+    color: $white;
+    padding: 60px 0 60px 0;
+    h3 {
+        text-transform: uppercase;
+        font-size: 22px;
+        margin: 32px 0 16px 0;
+        color: $secondary-color;
+    }
+    &__services {
+        text-align: center;
+        i {
+            font-size: 40px;
+        }
+    }
+}
+
+/*******************
+  FILOSOFIA
+*******************/
+
+.contenedor-filosofia {
+    background-image: url(http://gladheimlogistics.com/images/Freight-Forwarding-by-Gladheim-Logistics.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: $primary-color;
+    background-blend-mode: multiply;
+    color: $white;
+    padding: 60px 0 60px 0;
+    h3 {
+        text-transform: uppercase;
+        font-size: 22px;
+        margin: 32px 0 16px 0;
+        color: $secondary-color;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*******************
+  Contacto
+*******************/
+.contenedor-contacto {
+    background-color: $primary-color;
+    &__contacto {
+        background-color: $white;
+        padding: 60px;
+        box-shadow: 0 2px 16px 0 rgba(71,100,128,.17);
+        margin-top: -50px;
+    }
+    &__redes {
+        a {
+            display: block;
+            color: $secondary-color;
+            margin: 20px 0;
+            i {
+                color: $white;
+                font-size: 24px;
+                margin-right: 20px;
+            }
+            &:hover {
+                color: $light-gray;
+                i {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+/*******************
   Footer
 *******************/
 
@@ -747,14 +914,33 @@ footer {
 
 .footer-base {
     background-color: $footer-background;
-    padding: 32px 0 24px 0;
+    padding: 50px 0 38px 0;
     color: $dark-gray;
     font-size: 14px;
-    @include breakpoint(medium only) {
+    line-height: 24px;
+    .column, .columns {
+        @include breakpoint(small only) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+    @include breakpoint(small only) {
         text-align: center;
     }
     img {
         width: 150px;
+    }
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+
+      li {
+        list-style-type: none;
+
+        a {
+          display: inline;
+        }
+      }
     }
     h1,
     h2,
@@ -762,31 +948,78 @@ footer {
     h4,
     h5,
     h6 {
-        color: color-pick-contrast($footer-background);
+        @include breakpoint(small only) {
+            margin-bottom: 8px;
+        }
     }
     a {
-        color: color-pick-contrast($footer-background);
         border-bottom: 1px solid transparent;
-        @include transition(all ease 400ms);
+        @include transition(all ease 200ms);
         &:hover {
-            color: color-pick-contrast($footer-background);
-            border-bottom: 1px solid color-pick-contrast($footer-background);
+            border-bottom: 1px solid $primary-color;
+        }
+    }
+    &__contenedor-blanco {
+        border-radius: $global-radius;
+        background-color: $white;
+        box-shadow: 0 2px 16px 0 rgba(71,100,128,0.17);
+        padding: 56px 43px 43px 43px;
+        text-align: center;
+        max-width: 400px;
+        float: right;
+        margin-top: -74px;
+        font-size: 16px;
+        @include breakpoint(small only) {
+            float: none;
+            width: 100%;
+            margin-bottom: 32px;
+            padding: 16px 16px 38px 16px;
+            max-width: none;
+        }
+        p {
+            margin-bottom: 0;
+            line-height: 19px;
+        }
+        .button {
+            @include breakpoint(small only) {
+                width: 100%;
+                margin-bottom: 16px;
+            }
         }
     }
     &__legales {
-        height: 72px;
-        display: flex;
-        align-items: flex-end;
+        @include breakpoint(small only) {
+            margin: 16px 0 24px 0;
+        }
         p {
             line-height: 1;
             width: 100%;
-            text-align: right;
+            text-align: center;
+            @include breakpoint(small only) {
+                text-align: center;
+                line-height: 1.6;
+                font-size: 16px;
+            }
         }
         a {
             margin: 0 4px;
+            &:last-child {
+                margin: 0 0 0 4px;
+            }
+        }
+    }
+    &__bloque-elementos {
+        p {
+            line-height: 18px;
+        }
+        @include breakpoint(small only) {
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
         }
     }
 }
+
 
 /***********
 Skip
