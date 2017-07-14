@@ -1,0 +1,114 @@
+// Site header
+// -----------
+.site-header {
+  
+  /*******************
+NAVBAR
+*******************/
+  .topbar-fixed {
+    position: fixed;
+    height: $topbar-height;
+    width: 100%;
+    z-index: 998;
+    background-color: $topbar-background;
+    color: $topbar-color-text;
+    padding: $unit-layout 0;
+    @include transition(all ease 200ms);
+    &.stick {
+      top: 0;
+      padding: 0;
+    }
+    .contenedor-elementos-topbar {
+      .right-section {
+        position: relative;
+      }
+    }
+  }
+  .topbar-relative {
+    @include transition(all ease 0ms);
+    @include transition(background-color ease 200ms);
+    position: relative;
+    height: $topbar-height;
+    width: 100%;
+    z-index: 996;
+    color: $topbar-color-text;
+    padding: 16px 0 24px 0;
+    top: 0;
+    &.stick {
+      top: 0;
+      position: fixed;
+      @include transition(all ease 0ms);
+      @include transition(background-color ease 200ms);
+      background-color: $white;
+      padding: 0;
+      .nav-wrapper__menu {
+        padding-right: 16px;
+        @include breakpoint(small only) {
+          padding-right: 16px;
+        }
+        @include transition(all ease 200ms);
+      }
+      .nav-wrapper__logo {
+        @include transition(all ease 200ms);
+      }
+    }
+    .contenedor-elementos-topbar {
+      .right-section {
+        position: relative;
+      }
+    }
+    @include breakpoint(medium down) {
+      padding: 16px 0 18px 0;
+    }
+  }
+  .topbar-absolute {
+    @include transition(all ease 0ms);
+    @include transition(background-color ease 200ms);
+    position: absolute;
+    width: 100%;
+    z-index: 996;
+    color: $topbar-color-text;
+    padding: 0 0 24px 0;
+    top: 0;
+    &.stick {
+      top: 0;
+      position: fixed;
+      @include transition(all ease 0ms);
+      @include transition(background-color ease 200ms);
+      background-color: $white;
+      padding: 0;
+      .nav-wrapper__logo {
+        @include transition(all ease 200ms);
+        img {
+          width: 148px;
+          margin-top: 0;
+        }
+      }
+    }
+    @include breakpoint(medium down) {
+      padding: 16px 0 18px 0;
+    }
+    &__options {
+      background-color: $black;
+      color: $white;
+      font-size: 14px;
+      height: 40px;
+      a {
+        color: $white;
+        transition: all ease 200ms;
+          &:hover {
+              color: $secondary-color !important;
+          }
+      }
+    }
+    &__links-container {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .topbar-helper {
+    width: 100%;
+  }
+}

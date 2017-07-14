@@ -1,0 +1,128 @@
+// Site container
+// --------------
+.site-container {
+  /*******************
+  INTRO
+*******************/
+  .intro {
+    background-color: $secondary-color;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    &__lado-izquierdo,
+    &__lado-derecho {
+      position: relative;
+      width: 50%;
+      float: left;
+    }
+    &__parrafo-izquierdo,
+    &__parrafo-derecho {
+      width: calc(75% - 0.5rem);
+      margin: 0 auto;
+      position: relative;
+      h3 {
+        text-transform: uppercase;
+        font-size: 24px;
+        span {
+          font-weight: bold;
+          color: $primary-color;
+        }
+      }
+      .marca-agua {
+        position: absolute;
+        font-size: 60px;
+        font-weight: bold;
+        color: rgba(33, 61, 115, 0.3);
+        top: -15px;
+      }
+    }
+    &__parrafo-izquierdo {
+      color: $white;
+      text-align: right;
+      .marca-agua {
+        right: -40px;
+      }
+    }
+    &__parrafo-derecho {
+      .marca-agua {
+        left: -40px;
+      }
+    }
+  }
+  /*******************
+  NOSOTROS
+*******************/
+  .contenedor-nosotros {
+    background-color: $primary-color;
+    color: $white;
+    padding: 60px 0 60px 0;
+    h3 {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 32px 0 16px 0;
+      color: $secondary-color;
+    }
+    &__services {
+      text-align: center;
+      i {
+        font-size: 40px;
+      }
+    }
+  }
+  /*******************
+  FILOSOFIA
+*******************/
+  .contenedor-filosofia {
+    background-image: url(http://gladheimlogistics.com/images/Freight-Forwarding-by-Gladheim-Logistics.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: $primary-color;
+    background-blend-mode: multiply;
+    color: $white;
+    padding: 60px 0 60px 0;
+    h3 {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 32px 0 16px 0;
+      color: $secondary-color;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /*******************
+  Contacto
+*******************/
+  .contenedor-contacto {
+    background-color: $primary-color;
+    &__contacto {
+      background-color: $white;
+      padding: 60px;
+      box-shadow: 0 2px 16px 0 rgba(71, 100, 128, .17);
+      margin-top: -50px;
+    }
+    &__redes {
+      a {
+        display: block;
+        color: $secondary-color;
+        margin: 20px 0;
+        i {
+          color: $white;
+          font-size: 24px;
+          margin-right: 20px;
+        }
+        &:hover {
+          color: $light-gray;
+          i {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

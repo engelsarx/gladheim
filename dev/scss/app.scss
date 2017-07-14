@@ -51,24 +51,46 @@
 @include motion-ui-animations;
 
 // Custom - archivos para sobreescribir estilos de foundation o añadir nuevos
-@import 'custom/prefixer';
-@import 'custom/custom';
-@import 'custom/ripple';
-@import 'custom/foundation-top-bar';
-@import 'custom/materialize-tabs-custom';
-@import 'custom/menu';
-@import 'custom/owl-carousel';
-@import 'custom/hamburgers/hamburgers';
+@import 'components/ripple';
+@import 'components/foundation-top-bar';
+@import 'components/menu';
+@import 'components/owl-carousel';
+@import 'components/hamburgers/hamburgers';
+
+// Config
+// ------------
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/variables';
+@import 'config/utilities';
+
+// Base
+// ------------
+@import 'base/custom-utils';
+
+// Layout
+// ------------
+@import 'layout/custom';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/navigation';
 
 // Includes - se añaden para sobreescribir los estilos de foundation
 @include foundation-top-bar;
 
-// Componentes materialize
-@import 'materialize/materialize-form';
-@import 'materialize/materialize-navBar';
-@import 'materialize/materialize-sideNav';
-@import 'materialize/materialize-tabs';
+// Componentes materialize - copiar aquí el componente original de materialize y sobreescribirlo en el apartado de abajo
+@import 'lib/materialize/forms/checkboxes';
+@import 'lib/materialize/forms/file-input';
+@import 'lib/materialize/forms/forms';
+@import 'lib/materialize/forms/input-fields';
+@import 'lib/materialize/forms/radio-buttons';
+@import 'lib/materialize/forms/range';
+@import 'lib/materialize/forms/select';
+@import 'lib/materialize/forms/switches';
+@import 'lib/materialize/materialize-navBar';
+@import 'lib/materialize/materialize-sideNav';
 
 // Custom - archivos para sobreescribir estilos de materialize
-@import 'custom/materialize-tabs-custom';
-@import 'custom/materialize-sideNav-custom';
+@import 'components/custom-input-field';
+@import 'components/materialize-sideNav-custom';

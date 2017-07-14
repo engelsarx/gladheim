@@ -1,0 +1,205 @@
+// Brand Colours
+//-----------
+
+$tertiary-color: #CB6BB4;
+$tertiary-lighten-color: lighten($tertiary-color, 10%);
+$tertiary-darken-color: darken($tertiary-color, 10%);
+
+// Text Colours
+//-----------
+$text-color: #555555;
+$text-lighten-color: lighten($tertiary-color, 10%);
+$text-darken-color: darken($tertiary-color, 10%);
+
+$title-color: $text-color;
+$title-lighten-color: lighten($title-color, 10%);
+$title-darken-color: darken($title-color, 10%);
+
+// Generic Colours
+//-----------
+$palettes-neutral: (
+	white: (
+		base  : #ffffff,
+		light : #f5f5f5,
+		dark  : #fafafa
+	),
+	black: (
+		base  : #474646,
+		light : #424242,
+		dark  : #0c0d10
+	),
+	grey: (
+		base  : #555555,
+		light : #AFAFAF,
+		dark  : #222222
+	),
+	red: (
+		base  : #ec6446,
+		light : #f5f5f5,
+		dark  : #fafafa
+	),
+	blue: (
+		base  : #009FDA,
+		light : #424242,
+		dark  : #00224C
+	),
+	yellow: (
+		base  : #F2AC02,
+		light : #949494,
+		dark  : #1d1d1d
+	),
+	green: (
+		base  : #019798,
+		light : #00BFC1,
+		dark  : #016B6C
+	),
+	purple: (
+		base  : #baaad3,
+		light : #949494,
+		dark  : #1d1d1d
+	),
+);
+
+$transparent: rgba(palette(white),0);
+
+// States Colours
+//-----------
+$error: rgb(190,25,25);
+$success: #50aa00;
+$callout: #f1f0f0;
+
+// Sharing Colours
+//-----------
+$facebook-color: #3b5998;
+$twitter-color: #55acee;
+$linkedin-color: #007bb6;
+$google-plus-color: #dd4b39;
+$youtube-color: #d30a20;
+
+
+// Easing
+//-----------
+//
+// http://cubic-bezier.com/
+// ease-in fast->slow
+// ease-out slow->fast
+$ease-in: cubic-bezier(0,0,.24,.9);
+$ease-out: cubic-bezier(.59,0,.68,.69);
+$ease-in-bounce: cubic-bezier(.03,.27,.49,1.22);
+$ease-out-bounce: cubic-bezier(.59,0,.59,1.48);
+$ease-linear: cubic-bezier(.03,.27,.44,.93);
+$ease-extreme: cubic-bezier(.68,-0.55,.26,1.55);
+
+
+// Mediaqueries
+//-----------
+$mobile:             20em !default;    // 320px
+$mobile-landscape:   30em !default;    // 480px
+$tablet-small:       37.5em !default;  // 600px
+$tablet-medium:      40em !default;    // 640px
+$tablet:             48em !default;    // 768px
+$tablet-weird:       52.5em !default;  // 840px
+$tablet-large:       64em !default;    // 1024px
+$desktop:            60em !default;    // 960px
+$desktop-extralarge: 85em !default;    // 1360px
+$desktop-max-width:  93.75em !default; // 1500px
+
+
+// Grid
+//-----------
+$max-width: $desktop-max-width;
+
+
+// Header
+//-----------
+
+
+// Menu
+//-----------
+
+
+// Utilities
+//-----------
+$radius: 0.5em;
+
+
+// Z-index
+//-----------
+$z-layers : (
+  bottomless-pit: -9999,
+  default: 1,
+  slider: 100,
+  dropdown: 200,
+  overlay: 300,
+  modal: 400,
+  menu: 500,
+  spinner: 600
+);
+
+// Unit layout
+//-----------
+$unit-layout: 16px;
+
+// Forms MATERIALIZE
+// ==========================================================================
+
+// --> Dropdown
+// ==========================================================================
+
+$dropdown-bg-color: #fff !default;
+$dropdown-hover-bg-color: #eee !default;
+$dropdown-color: $secondary-color !default;
+$dropdown-item-height: 50px !default;
+$gutter-width: 1.5rem !default;
+
+// Text Inputs + Textarea
+$input-height: 3rem !default;
+$input-border-color: color("grey", "base") !default;
+$input-border: 1px solid $input-border-color !default;
+$input-background: #fff !default;
+$input-error-color: $error-color !default;
+$input-success-color: $success-color !default;
+$input-focus-color: $secondary-color !default;
+$input-font-size: 1rem !default;
+$input-margin-bottom: 20px;
+$input-margin: 0 0 $input-margin-bottom 0 !default;
+$input-padding: 0 !default;
+$input-transition: all .3s !default;
+$label-font-size: .8rem !default;
+$input-disabled-color: rgba(0,0,0, .26) !default;
+$input-disabled-solid-color: #BDBDBD !default;
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+$input-invalid-border: 1px solid $input-error-color !default;
+$placeholder-text-color: gray !default;
+
+// Radio Buttons
+$radio-fill-color: $secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
+$radio-border: 2px solid $radio-fill-color !default;
+
+// Range
+$range-height: 14px !default;
+$range-width: 14px !default;
+$track-height: 3px !default;
+
+// Select
+$select-border: 1px solid #f2f2f2 !default;
+$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-focus: 1px solid lighten($secondary-color, 47%) !default;
+$select-padding: 5px !default;
+$select-radius: 2px !default;
+$select-disabled-color: rgba(0,0,0,.3) !default;
+
+// Switches
+$switch-bg-color: $secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+$switch-radius: 15px !default;
+
+/// Settings topbar
+$topbar-background: rgba(255, 255, 255, 0.8) !default;
+$topbar-color-text: $dark-gray !default;
+$topbar-height: auto !default;
+$topbar-height-logo: 68px;
+

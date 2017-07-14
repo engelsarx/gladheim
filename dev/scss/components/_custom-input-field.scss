@@ -1,0 +1,12 @@
+.input-field {
+  &.columns {
+    label {
+      left: map-get($grid-column-gutter, medium) / 2;
+    }
+
+    .prefix ~ label,
+    .prefix ~ .validate ~ label {
+      width: calc(100% - 3rem - #{grid-column-gutter(medium)});
+    }
+  }
+}

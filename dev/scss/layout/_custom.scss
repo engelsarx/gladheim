@@ -1,0 +1,48 @@
+// No Text Select
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*******************
+  Contenedores
+*******************/
+
+
+
+
+/***********
+Address
+************/
+
+address {
+    font-style: normal;
+}
+
+
+/***********
+Estilos especiales para firefox y IE
+************/
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+@media screen and (min-width:0\0) {
+    /* Tus estilos CSS para IE9, IE10, IE11  */
+}
+
+@-moz-document url-prefix() {
+
+}
+
+
+/***********
+Termina custom
+************/
+
