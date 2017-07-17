@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="50px" viewBox="0 0 36 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Campa" transform="translate(-612.000000, -539.000000)">
+            <g id="map-marker" transform="translate(612.000000, 539.000000)">
+                <circle id="Oval" fill="#FFFFFF" cx="16.5" cy="18.5" r="15.5"></circle>
+                <ellipse id="Oval-Copy" fill="#BCBCBC" style="mix-blend-mode: multiply;" cx="17.5" cy="48" rx="12.5" ry="2"></ellipse>
+                <path d="M17.8802471,0 C8.00614093,0 0,8.05976757 0,18.0000124 C0,22.0488404 1.32700314,25.7814032 3.56808976,28.7903251 L17.8803454,48 L32.1925027,28.7903251 C34.4337859,25.7814032 35.7605925,22.0489393 35.7605925,18.0000124 C35.7605925,8.05976757 27.7544516,0 17.8802471,0 Z" id="Shape" fill="#00B159" fill-rule="nonzero"></path>
+                <path d="M17.8802471,27.9999444 C12.3945224,27.9999444 7.9468345,23.5226299 7.9468345,17.9999959 C7.9468345,12.4775268 12.3945224,7.99988253 17.8802471,7.99988253 C23.3661356,7.99988253 27.8136597,12.4775268 27.8136597,17.9999959 C27.8136597,23.5227123 23.3662175,27.9999444 17.8802471,27.9999444 Z" id="Path" stroke="#484848" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

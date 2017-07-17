@@ -61,20 +61,90 @@
   /*******************
   NOSOTROS
 *******************/
-  .contenedor-nosotros {
+  .us-container {
     padding: 120px 0 60px 0;
+    position: relative;
+    z-index: 2;
     h2 {
       text-transform: uppercase;
-      margin: 32px 0 16px 0;
       color: $primary-color;
     }
+    &__characteristics {
+      position: absolute;
+      width: 100%;
+      top: 40px;
+    }
     &__services {
+      min-height: 680px;
+      display: flex;
+      align-items: flex-end;
+    }
+    &__image {
       text-align: center;
-      i {
-        font-size: 40px;
+      padding-top: 16px;
+      img {
+        width: 519px;
       }
     }
+    &__item {
+      @include white-block;
+      padding-left: 66px;
+      margin-bottom: 70px;
+      h3 {
+        color: $primary-color;
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        color: $white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        transform: translateY(-50%);
+      }
+    }
+    &:before {
+      content: '';
+      display: block;
+      background-color: $white;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      transform: skew(0deg,5deg);
+      z-index: -1;
+      bottom: -10%;
+    }
   }
+
+/*******************
+  MAPA
+*******************/
+
+.map-container {
+  height: 600px;
+  position: relative;
+  z-index: 1;
+  #map-globe {
+    height: 600px;
+  }
+  &:before {
+      content: '';
+      display: block;
+      background-color: #011420;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      transform: skew(0deg,5deg);
+      z-index: -1;
+      bottom: -10%;
+    }
+}
+
+
   /*******************
   FILOSOFIA
 *******************/
