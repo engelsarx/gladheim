@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
     });
 
     var carruselHeader = $(".carrusel-header");
-    var carruselServicios = $(".carrusel-servicios");
+    var carruselServicios = $(".services-carousel");
 
     carruselHeader.on('initialized.owl.carousel ' + 'translated.owl.carousel', function (e) {
         var owlItemActivo = $('.carrusel').find('.owl-item.active');
@@ -97,10 +97,11 @@ jQuery(document).ready(function($) {
             768: {
                 items: 1,
                 nav: true,
-                dots: true,
+                dots: false,
                 loop: true,
                 stagePadding: 0,
-                autoplay: false
+                autoplay: false,
+                mouseDrag: false
             }
         }
     });

@@ -9,8 +9,8 @@ CARRUSEL
 .carrusel {
     max-height: 678px;
     overflow: hidden;
-    &--servicios {
-        max-height: 600px;
+    &--services {
+        max-height: 400px;
     }
     .carrusel-header {
         position: relative !important;
@@ -66,23 +66,62 @@ CARRUSEL
             }
         }
     }
-    .carrusel-servicios {
+    .services-carousel {
         position: relative;
         &.owl-carousel .owl-item .item {
-            height: 600px;
-            .servicio {
-                display: flex;
-                align-items: center;
-                padding: 60px 100px;
-                font-size: 14px;
+            height: 400px;
+            @include white-block;
+            padding: 0;
+            box-shadow: none;
+            border: 1px solid $light-gray;
+        }
+        &__service {
+            font-size: 14px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            .image {
+                display: inline-block;
+                height: 100%;
+                overflow: hidden;
                 img {
-                    height: 200px;
-                    display: inline-block;
-                    margin-right: 40px;
+                    height: 100%;
+                    min-height: 400px;
+                    width: auto;
+                    max-width: none;
                 }
-                .description {
-                    display: inline-block;
+            }
+            .description {
+                display: inline-block;
+            }
+            .icons {
+                position: relative;
+                min-height: 300px;
+                ul {
+                    list-style: none;
+                    position: absolute;
+                    height: 100%;
+                    width: calc(100% - 16px);
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    li {
+                        display: inline-block;
+                        width: 33.3333%;
+                        text-align: center;
+                        span {
+                            i {
+                                font-size: 32px;
+                            }
+                        }
+                    }
                 }
+            }
+        }
+        .owl-nav {
+            .owl-prev {
+                left: 25%;
             }
         }
     }
@@ -112,7 +151,7 @@ CARRUSEL
 .carrusel .owl-nav {
     position: absolute;
     width: 100%;
-    top: calc(50% - 40px);
+    top: calc(50% - 20px);
     padding: 0 15px;
     -webkit-transition: all ease 400ms;
     -moz-transition: all ease 400ms;
