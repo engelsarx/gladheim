@@ -120,6 +120,11 @@ CARRUSEL
             }
         }
         .owl-nav {
+            .owl-prev, .owl-next {
+                background-color: transparent;
+                color: $medium-gray;
+                text-shadow: none;
+            }
             .owl-prev {
                 left: 25%;
             }
