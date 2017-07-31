@@ -459,8 +459,8 @@ h6 {
     }
 }
 
-.texto-gris {
-    color: $secondary-color !important
+.texto-graylight {
+    color: $light-gray !important
 }
 
 h1,
@@ -469,8 +469,8 @@ h3,
 h4,
 h5,
 h6 {
-    &.texto-gris {
-        color: $secondary-color !important;
+    &.texto-graylight {
+        color: $light-gray !important;
     }
 }
 
@@ -501,6 +501,21 @@ h5,
 h6 {
     &.texto-primary {
         color: $primary-color !important;
+    }
+}
+
+.texto-secondary {
+    color: $secondary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.texto-secondary {
+        color: $secondary-color !important;
     }
 }
 
@@ -547,7 +562,6 @@ h6 {
         margin-bottom: 0;
     }
 }
-
 
 /*******************
   Background colores
@@ -664,6 +678,20 @@ h6 {
                 padding: 15px;
             }
         }
+    }
+}
+
+/*******************
+  MIXIN CONTENEDOR BLOQUES
+*******************/
+@mixin white-block() {
+    background-color: $white;
+    border-radius: $global-radius;
+    padding: 16px;
+    position: relative;
+    box-shadow: 3px 3px 12px rgba(183, 183, 183, 0.5);
+    p {
+        margin-bottom: 0;
     }
 }
 
