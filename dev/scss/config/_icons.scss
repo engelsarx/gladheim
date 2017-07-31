@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "gladheimicons-font";
+	src: url('../fonts/gladheimicons-font.eot');
+	src: url('../fonts/gladheimicons-font.eot?#iefix') format('eot'),
+		url('../fonts/gladheimicons-font.woff2') format('woff2'),
+		url('../fonts/gladheimicons-font.woff') format('woff'),
+		url('../fonts/gladheimicons-font.ttf') format('truetype'),
+		url('../fonts/gladheimicons-font.svg#gladheimicons-font') format('svg');
+}
+
+.gladheim-icon:before {
+	font-family: "gladheimicons-font";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.gladheim-icon-consolidation:before {
+	content: "\B001";
+}
+
+.gladheim-icon-employers:before {
+	content: "\B002";
+}
+
+.gladheim-icon-increase-strategy:before {
+	content: "\B003";
+}
+
+.gladheim-icon-inventary:before {
+	content: "\B004";
+}
+
+.gladheim-icon-labeled:before {
+	content: "\B005";
+}
+
+.gladheim-icon-new-market:before {
+	content: "\B006";
+}
+
+.gladheim-icon-promotional-packaging:before {
+	content: "\B007";
+}
+
+.gladheim-icon-relationships:before {
+	content: "\B008";
+}
+
+.gladheim-icon-service:before {
+	content: "\B009";
+}
+
+.gladheim-icon-storage:before {
+	content: "\B00A";
+}
+
+.gladheim-icon-sub-contratation:before {
+	content: "\B00B";
+}
+
+.gladheim-icon-world:before {
+	content: "\B00C";
+}

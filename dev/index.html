@@ -32,10 +32,11 @@
         Gladheim Logistics - Logística en transporte    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/8e88c58498.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
     <!--build:css css/app.min.css -->
     <link rel="stylesheet" href="css/app.css">
     <!--endbuild-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU0MUVbG-mOUmd_sNr5WIUtzDSOQrFH3Y"></script>
     <!-- Google Analytics -->
     <script>
     (function(i, s, o, g, r, a, m) {
@@ -55,140 +56,540 @@
     <!-- End Google Analytics -->
 </head>
 <body>
-<header class="site-header">
-        <nav class="topbar-fixed show-for-medium">
-            <div class="nav-wrapper row">
+  <header class="site-header" id="inicio">
+    <nav class="topbar-absolute">
+        <div class="topbar-absolute__options">
+            <div class="row">
                 <div class="column">
-                    <div class="nav-wrapper__menu">
-                        <a href="" class="nav-wrapper__logo"><img src="images/logo.png" /></a>
-                        <ul class="show-for-large">
-                            <li>
-                                <a href="">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="">Nosotros</a>
-                            </li>
-                            <li>
-                                <a href="">Filosofía</a>
-                            </li>
-                            <li>
-                                <a href="">Servicios</a>
-                            </li>
-                            <li>
-                                <a href="">Contacto</a>
-                            </li>
-                            <li>
-                                <a href="">English</a>
-                            </li>
-                        </ul>
+                  <div class="topbar-absolute__links-container">
+                    <a href="" class="float-left"><i class="fa fa-skype" aria-hidden="true"></i> gladheimlogistics</a>
+                    <a href="" class="float-right">English</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+      <div class="nav-wrapper row">
+        <div class="column">
+          <div class="nav-wrapper__menu">
+            <a href="#inicio" title="Ir a inicio" class="nav-wrapper__logo"><img width="243" height="103" src="images/logo.png" alt="Logo" /></a>
+            <ul class="show-for-large">
+              <li>
+                <a class="active" href="#inicio" title="Ir a inicio">Inicio
+                                <span class="slider"></span>
+                            </a>
+              </li>
+              <li>
+                <a href="#nosotros" title="Quiénes somos">Nosotros
+                                <span class="slider"></span>
+                            </a>
+              </li>
+              <li>
+                <a href="#filosofia" title="Nuestra filosofía">Filosofía
+                                <span class="slider"></span>
+                            </a>
+              </li>
+              <li>
+                <a href="#servicios" title="Nuestros servicios">Servicios
+                                <span class="slider"></span>
+                            </a>
+              </li>
+              <li>
+                <a href="#contacto" title="Contacta con nosotros">Contacto
+                                <span class="slider"></span>
+                            </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="topbar-helper"></div>
+    <div class="side-nav" id="mobile-menu">
+      <button data-activates="mobile-menu" class="hamburger hamburger--spin side-nav__boton-sideNav hide-for-large" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+      <div class="side-nav__contenedor-elementos">
+        <ul class="side-nav__menu">
+          <li>
+            <a class="active" href="#inicio" title="Ir a inicio">Inicio</a>
+          </li>
+          <li>
+            <a href="#nosotros" title="Quiénes somos">Nosotros</a>
+          </li>
+          <li>
+            <a href="#filosofia" title="Nuestra filosofía">Filosofía</a>
+          </li>
+          <li>
+            <a href="#servicios" title="Nuestros servicios">Servicios</a>
+          </li>
+          <li>
+            <a href="#contacto" title="Contacta con nosotros">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+<main class="site-container">
+    <div id="home">
+        <section class="imagen-header">
+    <div class="carrusel">
+        <div class="carrusel-header owl-carousel">
+            <div class="item">
+                <img src="http://www.resplashed.com/img/c112734a04ca.jpg" />
+                <div class="carrusel-header__description">
+                    <div class="small-12 column">
+                        <h1>
+                            Título 
+                            <strong>principal</strong>
+                            del sitio
+                        </h1>
+                        <div class="space-blank veinte"></div>
+                        <a href="#nosotros">
+                            <span>Ver más</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div class="topbarApp hide-for-medium">
-            <ul id="mobile-menu" class="side-nav">
-                <li>
-                    <div class="userView">
-                        <div class="background">
-                            <!--<img src="assets/img/back-movil.jpg">-->
-                        </div>
-                        <a href=""><img class="logo" src="images/logo.png"></a>
-                        <div class="clear"></div>
-                        <a><span class="texto-blanco name">Hola</span></a>
+            <div class="item">
+                <img src="http://www.resplashed.com/img/ed9b7d56ffc1.jpg" />
+                <div class="carrusel-header__description">
+                    <div class="small-12 column">
+                        <h2>
+                            Líderes en <strong>logística y comercio internacional</strong> con soluciones a la medida
+                        </h2>
+                        <div class="space-blank veinte"></div>
+                        <a href="#nosotros">
+                            <span>Ver más</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
                     </div>
-                </li>
-                <li>
-                    <a href="loginApp"><i class="yei icon-usuario"></i>Inicio</a>
-                </li>
-                <li>
-                    <a href="loginApp"><i class="yei icon-usuario"></i>Nosotros</a>
-                </li>
-                <li>
-                    <a href="loginApp"><i class="yei icon-usuario"></i>Filosofía</a>
-                </li>
-                <li>
-                    <a href="loginApp"><i class="yei icon-usuario"></i>Servicios</a>
-                </li>
-                <li>
-                    <a href="loginApp"><i class="yei icon-usuario"></i>Contacto</a>
-                </li>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                <li><a><i class="yei icon-cerrarSesion"></i>Cambiar idioma</a></li>
-            </ul>
-            <a href="" id="triggerSide" data-activates="mobile-menu" class="button-collapse"><i class="material-icons" aria-hidden="true">menu</i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://www.resplashed.com/img/6501e80c94f4.jpg" />
+                <div class="carrusel-header__description">
+                    <div class="small-12 column">
+                        <h2>
+                            Líderes en <strong>logística y comercio internacional</strong> con soluciones a la medida
+                        </h2>
+                        <div class="space-blank veinte"></div>
+                        <a href="#nosotros">
+                            <span>Ver más</span>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-</header>
-<main class="site-container">
-    <div id="home">
-        <section class="imagen-header">    <div class="carrusel">        <div class="carrusel-header owl-carousel">            <div class="item">                <img src="images/slider/transportacion-importacion-exportacion.jpg" />                <div class="texto">                    <div class="row">                        <div class="small-12 medium-6 large-6 medium-offset-7 large-offset-7">                            <h2 class="small-6 medium-6 large-6 texto-azul">                                    Logística                                    </h2>                            <a id="calculoPrestamo" href="#" class="button">link a algún sitio</a>                        </div>                    </div>                </div>            </div>            <div class="item">                <div class="imagen2"></div>                <div class="texto">                    <div class="row">                        <div class="small-12 medium-6 large-6 medium-offset-7 large-offset-7">                            <h2 class="small-6 medium-6 large-6 texto-blanco">                                    Gestión de soluciones                                    </h2>                        </div>                    </div>                </div>            </div>            <div class="item">                <div class="imagen2"></div>                <div class="texto">                    <div class="row">                        <div class="small-12 medium-6 large-6 medium-offset-7 large-offset-7">                            <h2 class="small-6 medium-6 large-6 texto-blanco">                                    Transporte                                    </h2>                        </div>                    </div>                </div>            </div>        </div>    </div></section>        <section class="intro">    <div class="intro__lado-izquierdo">        <div class="intro__parrafo-izquierdo">            <h3><span>Más de 1000</span> Proyectos Realizados</h3>            <p>Estamos contentos de ser nosotros mismos una organización basada en soluciones así como tomarnos el tiempo para entender las necesidades del negocio de cada cliente.</p>            <span class="marca-agua" id="counter">0</span>        </div>    </div>    <div class="intro__lado-derecho">        <div class="intro__parrafo-derecho">            <h3><span>200</span> Clientes Satisfechos</h3>            <p>Estamos satisfechos con las expectativas de nuestros clientes teniendo en cuenta las necesidades cada vez más sofisticadas de comercio internacional a través de soluciones a medida y sin fisuras.</p>            <span class="marca-agua" id="counter1">0</span>        </div>    </div>    <div class="clear"></div></section>        <!--nosotros start--><div id="nosotros">    <div class="line2">        <div class="container">            <div class="row Fresh">                <div class="small-12 medium-4 columns Des">                    <i class="fa fa-user"></i>                    <h4>Profesionales capacitados</h4>                    <p>Nuestra prioridad es servir a nuestros clientes en cualquier momento.</p>                </div>                <div class="small-12 medium-4 columns Fully">                    <i class="fa fa-list"></i>                    <h4>Proveedores en México y el mundo</h4>                    <p>Podemos ofrecer a los clientes las mejores opciones de rutas y precios que ofrecen una alta calidad de nuestra gama de servicios.</p>                </div>                <div class="small-12 medium-4 columns Ver">                    <i class="fa fa-cog"></i>                    <h4>Servicio 24/7 durante todo el año</h4>                    <p>Cumplimos con altos estándares de calidad en el servicio, no tenemos excepciones.</p>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row">            <div class="small-12 columns wwa">                <span name="about"></span>                <div class="about2">                    <h3>Nosotros</h3>                    <h4>                    <p>Gladheim Logistics es una empresa de logística con sede en la Ciudad de México, México.</p><br>                    <p>Nuestra empresa cuenta con profesionales capacitados que prestan siempre un servicio 24/7 durante todo el año cumpliendo con altos estándares de calidad en el servicio, no tenemos excepciones, nuestra prioridad es servir a nuestros clientes en cualquier momento.</p><br><p>Estamos satisfechos con las expectativas de nuestros clientes teniendo en cuenta las necesidades cada vez  más sofisticadas de comercio internacional a través de soluciones a medida  y sin fisuras.</p><br><p>Nuestros servicios incluyen envíos aéreos, marítimos, terrestres, seguro de mercancía, consolidación de proveedores, despacho aduanal, distribución de mercancía, almacenamiento, gestión y soluciones logísticas personalizadas. Estamos contentos de ser nosotros mismos una organización basada en soluciones así como tomarnos el tiempo para entender las necesidades del negocio de cada cliente. Debido nuestras relaciones con proveedores en México y el mundo, podemos ofrecer a los clientes las mejores opciones de rutas y precios que ofrecen una alta calidad de nuestra gama de servicios.</p></h4>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row team">            <div class="small-12 medium-4 columns b1">                <img class="img-responsive" src="images/Gladheim/Logistica-logistics-1.png">                <h4></h4>                <h5>Comercio Internacional</h5>            </div>            <div class="small-12 medium-4 columns">                <img class="img-responsive" src="images/Gladheim/Logistica-logistics-2.png">                <h4></h4>                <h5>Exportación</h5>            </div>            <div class="small-12 medium-4 columns b3">                <img class="img-responsive" src="images/Gladheim/Logistica-logistics-3.png">                <h4></h4>                <h5>Transportación</h5>            </div>        </div>    </div>    <div class="container">        <div class="row">            <div class="small-12 medium-3 columns bar">                <div class="progB chart" data-percent="100" data-animate="3500">                    <div class="chart chart-content">                        <div class="percentage" data-percent="100">                            <span class="percent">100</span>                        </div>                    </div>                </div>                <div class="textP">                    <h3>Comercio Internacional</h3>                    <p>Ofrecemos paquetes de servicios                        <br> personalizados que pueden crecer.</p>                </div>            </div>            <div class="small-12 medium-3 columns bar">                <div class="progB chart" data-percent="100" data-animate="3500">                    <div class="chart chart-content">                        <div class="percentage" data-percent="100">                            <span class="percent">100</span>                        </div>                    </div>                </div>                <div class="textP">                    <h3>Aduanas</h3>                    <p>Ofrecemos paquetes de servicios                        <br> personalizados que pueden crecer.</p>                </div>            </div>            <div class="small-12 medium-3 columns bar ">                <div class="progB chart" data-percent="100" data-animate="3500">                    <div class="chart chart-content">                        <div class="percentage" data-percent="100">                            <span class="percent">100</span>                        </div>                    </div>                </div>                <div class="textP">                    <h3>Importación</h3>                    <p>Ofrecemos paquetes de servicios                        <br> personalizados que pueden crecer.</p>                </div>            </div>            <div class="small-12 medium-3 columns bar ">                <div class="progB chart" data-percent="100" data-animate="3500">                    <div class="chart chart-content">                        <div class="percentage" data-percent="100">                            <span class="percent">100</span>                        </div>                    </div>                </div>                <div class="textP">                    <h3>Exportación</h3>                    <p>Ofrecemos paquetes de servicios                        <br> personalizados que pueden crecer.</p>                </div>            </div>        </div>    </div>    <!--<div class="container">			<div class="row aboutUs">				<div class="small-12 columns ">					<h3>¿Qué dicen nuestros clientes sobre nosotros?</h3>				</div>			</div>		</div>-->    <!--<div style="position: relative;">			<div class="container">				<div class="row about">					<div class="small-12 medium-6 columns">						<div class="about1">						<img class="pic1Ab" src="images/picAbout/aboutP1.png">							<h3>Linda Carranco , Compañía A.C.</h3>							<p>Ofrecemos paquetes de servicios personalizados que pueden crecer de forma flexible con sus requerimientos y necesidades.</p>						</div>					</div>					<div class="small-12 medium-6 columns">						<div class="about2">						<img class="pic2Ab" src="images/picAbout/aboutP2.png">							<h3>Javier Plancarte, Compañía A.C.</h3>							<p>Ofrecemos paquetes de servicios personalizados que pueden crecer de forma flexible con sus requerimientos y necesidades.</p>						</div>					</div>				</div>			</div>			<div class="horL"></div>			<div class="container">				<div class="row about">					<div class="small-12 medium-6 columns">						<div class="about1">						<img class="pic1Ab" src="images/picAbout/aboutP2.png">							<h3>Octavio Gastón, Compañía A.C.</h3>							<p>Ofrecemos paquetes de servicios personalizados que pueden crecer de forma flexible con sus requerimientos y necesidades.</p>						</div>					</div>					<div class="small-12 medium-6 columns">						<div class="about2">						<img class="pic2Ab" src="images/picAbout/aboutP1.png">							<h3>Fernanda Ruíz , Compañía A.C.</h3>							<p>Ofrecemos paquetes de servicios personalizados que pueden crecer de forma flexible con sus requerimientos y necesidades.</p>						</div>					</div>				</div>			</div>		</div>-->    <br></div>        <!--filosofia start--><div id="filosofia">    <div class="line3">        <div class="container">            <div id="project1"></div>            <div class="row Ama">                <div class="small-12 columns">                    <span name="projects" id="projectss"></span>                    <h3>Nuestra Filosofía</h3>                    <p>La comprensión de nuestros clientes y sus necesidades de negocio es fundamental para Gladheim</p>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row">            <div class="small-12 columns wwa">                <span name="about"></span>                <div class="about2">                    <h3>Filosofía</h3>                    <h4>                    <p>Gladheim invierte constantemente en la gente, infraestructura y tecnologías de la información con la finalidad de innovar en los servicios del Freight Forwarding así como también el la gestión de soluciones en la cadena de suministros para clientes nuevos y ya existentes. Además de reinversión, creemos que la evaluación y capacidad de adaptación constante son factores críticos para la entrega de éxito para nuestros clientes en el que su propio entorno de negocio constantemente cambia.</p><br>                    <p>A través de toda nuestra infraestructura, la calidad y la pasión para ofrecer los más altos niveles de servicio al cliente consiste en apuntalar nuestra cultura. Como los plazos de entrega del producto disminuyen y la visibilidad del producto es cada vez más necesario para gestionar los niveles de inventarios globales, Gladheim tiene los recursos, sistemas, y compromisos necesarios para garantizar la seguridad del embarque.</p><br><p>La comprensión de nuestros clientes y sus necesidades de negocio es fundamental para nuestra filosofía y nos permite trabajar estrechamente con ellos para convertirse en una extensión sin problemas a su propia empresa.</p></h4>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row">            <div class="small-12 columns centPic">                <img src="images/Freight-Forwarding-by-Gladheim-Logistics.jpg" class="img-responsive" />            </div>        </div>    </div></div>        <!--servicios start--><div id="servicios">    <div class="line4">        <div class="container">            <div class="row Ama">                <div class="small-12 columns">                    <h3>Servicios</h3>                    <p>Conoce nuestras soluciones a medida y sin fisuras.</p>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row news">            <div class="small-12 medium-6 columns  text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/Globalizacion-en-la-Cadena-de-Suministro.jpg" />                <h3>Globalización en la Cadena de Suministro</h3>                <p>La gestión global de la cadena de suministro es un factor crítico de éxito para los fabricantes y los minoristas en muchas industrias. Usted puede tomar ventaja de la suite integrada de los servicios ofrecidos por Gladheim para gestionar su cadena de suministro. Desde las materias primas hasta la distribución al por menor, nuestro análisis y operaciones de personal trabajan en estrecha colaboración con los clientes para gestionar toda la cadena de suministro aportando servicios a la medida junto con el cumplimiento de los puntos de referencia acordados.</p>                <ul>                    <li>• Gestión global de mercancías</li>                    <br>                    <li>• Consolidación de carga</li>                    <br>                    <li>• Deposito y almacenamiento</li>                    <br>                    <li>• Inventario y gestión de materiales</li>                    <br>                    <li>• Actividades continuas de sub contratación</li>                    <br>                    <li>• Nuevos mercados emergentes</li>                    <br>                    <li>• Aumento de estratégias de abastecimiento global</li>                    <br>                    <li>• Relaciones complejas en la cadena de suministro</li>                    <br>                    <li>• Etiquetado</li>                    <br>                    <li>• Empaque promocional</li>                </ul>                <br>                <h4>Iniciativas Gladheim </h4>                <ul>                    <li>• Identificación y aprovechamiento de nuevas oportunidades y mercados emergentes                    </li>                    <br>                    <li>• Adaptarse a la complejidad de los reglamentos operativos locales</li>                    <br>                    <li>• Programas de gestión de proveedores para lograr la optimización de la cadena de suministros</li>                </ul>                <hr class="hrNews">            </div>            <div class="small-12 medium-6 columns text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/transporte-aereo-Gladheim.jpg" />                <h3>Transporte Aéreo </h3>                <p>El transporte aéreo es la mejor opción para transportar todo tipo de mercancías a cualquier aeropuerto del mundo con rápidez y seguridad. A través de Gladheim podemos realizar envíos de forma segura y eficiente para cargas de cualquier tipo de dimensión.</p>                <p>En la actualiadad contamos con una red de socios comerciales y acuerdos preferentes con la mayor parte de las aérolineas a nivel global brindando un servicio eficiente y seguro.</p>                <p>El servicio para este tipo de transporte incluye:</p>                <ul>                    <li>• Gestión documental</li>                    <br>                    <li>• Seguro de carga internacional </li>                    <br>                    <li>• Asesoría aduanal</li>                    <br>                    <li>• Servicio directo </li>                    <br>                    <li>• Empaque & embalaje</li>                    <br>                    <li>• Etiquetado</li>                    <br>                    <li>• Carga general</li>                    <br>                    <li>• Productos perecederos</li>                    <br>                    <li>• Cargas peligrosas y un seguimiento exhaustivo del estatus de cada embarque</li>                </ul>                <hr class="hrNews">            </div>        </div>    </div>    <div class="container">        <div class="row news2 news">            <div class="small-12 medium-6 columns text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/transporte-maritimo-Gladheim.jpg" />                <h3>Transporte Marítimo</h3>                <p>Gladheim es especialista tanto en el transporte marítimo para carga LCL como en el FCL.</p>                <p>El transporte marítimo es ideal para aquellas cargas que precisan de un desplazamiento seguro al mínimo coste y es que este tipo de transporte permite un ahorro de costes considerable, sobre todo si se utiliza el servicio de carga LCL debido a que es un sistema ideal de embarque que minimiza los costes y flexibiliza las entregas a los clientes.</p>                <p>Nuestro servicio de transporte marítimo incluye:</p>                <ul>                    <li>• Gestión documental</li>                    <br>                    <li>• Seguro de la mercancía</li>                    <br>                    <li>• Asesoría aduanal</li>                    <br>                    <li>• Recolección</li>                    <br>                    <li>• Empaque & embalaje</li>                    <br>                    <li>• Transporte FCL & LCL</li>                    <br>                    <li>• Servicio puerta a puerta</li>                    <br>                    <li>• Transporte a puerto y a lugar de destino</li>                    <br>                    <li>• Transporte de carga general</li>                    <br>                    <li>• Transporte de productos perecederos</li>                    <br>                    <li>• Transporte de mercancía peligrosa y un seguimiento exhaustivo del estatus de cada embarque.</li>                </ul>                <hr class="hrNews">            </div>            <div class="small-12 medium-6 columns text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/transporte-terrestre-Gladheim.jpg" />                <h3>Transporte Terrestre</h3>                <p>Nuestras soluciones de transporte terrestre prestan servicios de cadena de suministro de valor añadido en todo el mundo diseñado para satisfacer las exigencias de sus envíos proporcionando soluciones basadas en conocimientos para que su inventario siga circulando hasta llegar a su destino final.</p>                <P>Realizamos servicios de transporte nacional e internacional a Norte America y Centro America. FTL/LTL.</p>                <p>                    TLCAN – cruces fronterizos para la documentación.</p>                <p>                    Traspaleo de carga para material no peligrosos a través de las instalaciones cross dock. Carga de materiales peligrosos y experiencia en mercancías perecederas.</p>                <hr class="hrNews">            </div>        </div>    </div>    <div class="container">        <div class="row news2 news">            <div class="small-12 medium-6 columns text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/logistica-de-proyecto-Gladheim.jpg" />                <h3>Logística Proyecto</h3>                <p>Grandes proyectos significan grandes embarques. Si se trata de una plataforma de perforación, una planta eléctrica, un molino de papel o un gran desarrollo, algunas cargas se niegan a encajar en pequeños paquetes para el transporte sencillo. Son demasiado grandes, demasiado pesados, demasiado complicado o simplemente demasiado especializado para ajustarse a la norma. Mover esos envíos requiere habilidad, experiencia y el equipo adecuado – Gladheim proporciona el músculo para sostener cualquier tipo carga proyecto.</p>                <p>Gladheim es compatible con las principales empresas de proyectos combinando nuestro servicio de envíos, logística y división marinas que ofrecen servicios que incluyen: </p>                <ul>                    <li>• Encuesta de sitio / estudio de viabilidad (rutas y tiempo)</li>                    <br>                    <li>• Completo / Partes del capitulo (fletes aéreos, tiempo/ fletes marítimos)</li>                    <br>                    <li>• Transporte multimodal (ferrocarril, remolcadores y barcazas de carga pesada)</li>                    <br>                    <li>• Equipo de transporte especial (flat racks, open top, plataformas, soluciones tween deck)</li>                    <br>                    <li>• Negociación de carga (Negociación COA, validez de tarifas a largo plazo)</li>                    <br>                    <li>• Apoyo administrativo (despacho aduanal, documentación comercial)</li>                </ul>                <hr class="hrNews">            </div>            <div class="small-12 medium-6 columns text-left">                <img class="img-responsive picsGall" src="images/serviciosGladheim/distribucion-y-almacenamiento-Gladheim.jpg" />                <h3>Distribución & Almacenamiento</h3>                <p>Gladheim provee de servicios de almacenaje y distribución. Operamos una variada gama de instalaciones en diferentes lugares dependiendo de las necesidades del mercado. Esto incluye la configuración de la infraestructura de alta calidad en varios mercados en desarrollo donde hay almacenamiento de las instalaciones de buena calidad. Nuestro objetivo es crear una plataforma para que los clientes tengan un entorno de almacenamiento limpio, seguro y protegido con especial énfasis en la higiene y la salud, la seguridad en el entorno del almacén. También ofrecemos todos los servicios de valor añadido necesarios a los clientes debajo del mismo techo como son: etiquetado, embalaje, control de calidad, preparación de lotes, dosificación y secuencia, por nombrar algunos:</p>                <ul>                    <li>• Ropa</li>                    <br>                    <li>• FMCG (Productos de gran consumo)</li>                    <br>                    <li>• Farmaceutica</li>                    <br>                    <li>• Electrónica</li>                    <br>                    <li>• Venta al pormenor</li>                    <br>                    <li>• Piezas de repuesto</li>                </ul>                <hr class="hrNews">            </div>        </div>    </div></div>        <!--contacto start--><div id="contacto">    <div class="line5">        <div class="container">            <div class="row Ama">                <div class="small-12 columns">                    <h3>¿Cómo podemos ayudarte?</h3>                    <p>Envíanos tu solicitud y nos pondremos en contacto contigo.</p>                </div>            </div>        </div>    </div>    <div class="container">        <div class="row">            <div class="col-md-9 forma">                <form method="post" action="sendemail-esp.php" id="contactform">                    <input type="text" class="small-12 medium-6 columns name" name='name' id='name' placeholder='Nombre *' />                    <input type="email" class="small-12 medium-6 columns Email" name='email' id='email' placeholder='Email *' />                    <input type="text" class="small-12 columns Subject" name='subject' id='subject' placeholder='Título' />                    <textarea type="text" class="small-12 columns Message" name='message' id='message' placeholder='Mensaje *'></textarea>                    <div class="cBtn">                        <input value="BORRAR DATOS" class="reset" id="reset" name="Reset" type="reset">                        <input value="ENVIAR MENSAJE" class="send" id="submit" name="Submit" type="submit">                    </div>                </form>            </div>            <div class="small-12 medium-3 columns cont">                <ul>                    <li><a href="mailto:info@gladheimlogistics.com"><i class="fa fa-envelope"></i>info@gladheimlogistics.com</a></li>                    <li><i class="fa fa-skype"></i>gladheimlogistics</li>                    <li><a href="https://www.linkedin.com/company/gladheim-logistics-s-a-de-c-v-" target="_new"><i class="fa fa-linkedin"></i>Linkedin</a></li>                    <!--<li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</a></li>						<li><a href="#"><i class="fa fa-dribbble"></i>Dribbble</a></li>						<li><a href="#"><i class="fa fa-flickr"></i>Flickr</a></li>						<li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</a></li>-->                </ul>            </div>        </div>    </div></div>    </div>
+    </div>
+</section>        <section id="intro" class="intro">
+    <div class="scroll-down-icon">
+        <a href="#intro" class="skip">
+            <img src="images/scroll-down.svg" alt="más información">
+        </a>
+    </div>
+    <div class="intro__lado-izquierdo">
+        <div class="intro__parrafo-izquierdo">
+            <h4>Más de <span>1000 Proyectos Realizados</span></h4>
+            <p>Estamos contentos de ser nosotros mismos una organización basada en soluciones así como tomarnos el tiempo para entender las necesidades del negocio de cada cliente.</p>
+            <span class="marca-agua" id="counter">0</span>
+        </div>
+    </div>
+    <div class="intro__lado-derecho">
+        <div class="intro__parrafo-derecho">
+            <h4>200 <span>Clientes Satisfechos</span></h4>
+            <p>Estamos satisfechos con las expectativas de nuestros clientes teniendo en cuenta las necesidades cada vez más sofisticadas de comercio internacional a través de soluciones a medida y sin fisuras.</p>
+            <span class="marca-agua" id="counter1">0</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>        <!--nosotros start-->
+<div id="nosotros" class="us-container">
+  <div class="us-container__line">
+    <img src="images/line-landing.svg" alt="linea">
+  </div>
+  <div class="space-blank veinte"></div>
+  <div class="row">
+    <div class="small-12 medium-10 columns relative">
+      <div class="small-12 medium-6 large-2">
+        <h2>Nosotros</h2>
+      </div>
+      <div class="us-container__image small-12 medium-7 medium-offset-1">
+        <img src="images/world.svg" alt="rutas de vuelo sobre mundo">
+      </div>
+      <div class="us-container__characteristics">
+        <div class="us-container__item small-12 medium-5 columns medium-offset-6">
+          <i class="gladheim-icon gladheim-icon-employers"></i>
+          <h3>Profesionales capacitados</h3>
+          <p>Nuestra prioridad es servir a nuestros clientes en cualquier momento.</p>
+        </div>
+        <div class="us-container__item small-12 medium-5 columns medium-offset-7">
+          <i class="gladheim-icon gladheim-icon-world"></i>
+          <h3>Proveedores en México y el mundo</h3>
+          <p>Podemos ofrecer a los clientes las mejores opciones de rutas y precios que ofrecen una alta calidad de nuestra gama de servicios.</p>
+        </div>
+        <div class="us-container__item small-12 medium-5 columns medium-offset-6 end">
+          <i class="gladheim-icon gladheim-icon-service"></i>
+          <h3>Servicio 24/7 durante todo el año</h3>
+          <p>Cumplimos con altos estándares de calidad en el servicio, no tenemos excepciones.</p>
+        </div>
+      </div>
+      <div class="small-12 medium-6 large-3">
+        <p><strong class="texto-secondary">Gladheim Logistics</strong> es una empresa de logística con sede en la Ciudad de México, México.
+        <p>
+      </div>
+    </div>
+    <div class="small-12 medium-2 columns text-right relative us-container__services">
+      <div class="">
+        <h4 class="texto-secondary">Comercio internacional</h4>
+        <h4 class="texto-secondary">Aduanas</h4>
+        <h4 class="texto-secondary">Exportación</h4>
+        <h4 class="texto-secondary">Importación</h4>
+        <h4 class="texto-secondary">Transportación</h4>
+      </div>
+    </div>
+  </div>
+</div>
+        <div id="mapa" class="map-container">
+    <div id="map-globe"></div>
+    <div class="row relative">
+        <p class="small-12 medium-6 large-3 columns map-container__description">La gestión global de la cadena de suministro es un factor crítico de éxito para los fabricantes y los minoristas en muchas industrias.</p>
+    </div>
+</div>        <!--filosofia start-->
+<div id="filosofia" class="philosophy-container">
+  <div class="row">
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank cuarenta"></div>
+    <div class="small-12 medium-6 large-3 large-offset-1 column">
+      <h2 class="texto-blanco">Filosofía</h2>
+    </div>
+    <div class="small-12 medium-6 large-3 large-offset-4 right-align column end">
+      <p>La <strong class="texto-primary">comprensión de nuestros clientes</strong> y sus <strong class="texto-primary">necesidades de negocio</strong>        es fundamental para Gladheim</p>
+    </div>
+  </div>
+  <div class="space-blank cuarenta"></div>
+  <div class="row">
+    <div class="small-12 medium-6 large-6 large-offset-1 column philosophy-container__description">
+      <p>Gladheim invierte constantemente en la gente, infraestructura y tecnologías de la información con la finalidad de innovar
+        en los servicios del Freight Forwarding así como también en la gestión de soluciones en la cadena de suministros
+        para clientes nuevos y ya existentes. Además de reinversión, creemos que la evaluación y capacidad de adaptación
+        constante son factores críticos para la entrega de éxito para nuestros clientes en el que su propio entorno de negocio
+        cambia constantemente.</p><br>
+      <p>
+        Como los plazos de entrega del producto disminuyen y la visibilidad del producto es cada vez más necesario para gestionar
+        los niveles de inventarios globales, Gladheim puede garantizar la seguridad del embarque.</p>
+    </div>
+    <div class="small-12 medium-6 large-5 column center-align">
+      <img src="images/tarima.jpg" alt="tarima cajas" width="400" height="314">
+    </div>
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank cuarenta"></div>
+  </div>
+</div>        <!--servicios start-->
+<section id="servicios" class="services-container">
+  <div class="row">
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank cuarenta"></div>
+    <div class="space-blank veinte"></div>
+    <div class="small-12 medium-6 large-3 large-offset-1 column">
+      <h2 class="texto-blanco">Servicios</h2>
+    </div>
+    <div class="small-12 medium-6 large-7 right-align column end">
+      <h4 class="texto-secondary">Iniciativas Gladheim </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="space-blank treinta"></div>
+    <div class="small-12 medium-4 large-2 large-offset-5 columns center-align services-container__iniciative">
+      Identificación y aprovechamiento de nuevas oportunidades y mercados emergentes
+    </div>
+    <div class="small-12 medium-4 large-2 columns center-align services-container__iniciative">
+      Adaptarse a la complejidad de los reglamentos operativos locales
+    </div>
+    <div class="small-12 medium-4 large-2 columns end center-align services-container__iniciative">
+      Programas de gestión de proveedores para lograr la optimización de la cadena de suministros
+    </div>
+  </div>
+  <div class="space-blank treinta"></div>
+  <section class="carrusel carrusel--services row">
+    <div class="services-carousel owl-carousel column">
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img src="http://gladheimlogistics.com/images/serviciosGladheim/Globalizacion-en-la-Cadena-de-Suministro.jpg" />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Globalización en la Cadena de Suministro</h3>
+            <p>La gestión global de la cadena de suministro es un factor crítico de éxito para los fabricantes y los minoristas
+              en muchas industrias. Usted puede tomar ventaja de la suite integrada de los servicios ofrecidos por Gladheim
+              para gestionar su cadena de suministro.<br /><br />Desde las materias primas hasta la distribución al por menor,
+              nuestro análisis y operaciones de personal trabajan en estrecha colaboración con los clientes aportando servicios
+              a la medida junto con el cumplimiento de los puntos de referencia acordados.
+            </p>
+          </div>
+          <div class="icons small-12 medium-3 columns end">
+            <ul>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Gestión global de mercancías"><i class="gladheim-icon gladheim-icon-world"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Consolidación de carga"><i class="gladheim-icon gladheim-icon-consolidation"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Deposito y almacenamiento"><i class="gladheim-icon gladheim-icon-storage"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Inventario y gestión de materiales"><i class="gladheim-icon gladheim-icon-inventary"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Actividades continuas de sub contratación"><i class="gladheim-icon gladheim-icon-sub-contratation"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Nuevos mercados emergentes"><i class="gladheim-icon gladheim-icon-new-market"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Aumento de estratégias de abastecimiento global"><i class="gladheim-icon gladheim-icon-increase-strategy"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Relaciones complejas en la cadena de suministro"><i class="gladheim-icon gladheim-icon-relationships"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Etiquetado"><i class="gladheim-icon gladheim-icon-labeled"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Empaque promocional"><i class="gladheim-icon gladheim-icon-promotional-packaging"></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img src="http://gladheimlogistics.com/images/serviciosGladheim/transporte-aereo-Gladheim.jpg" />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Transporte Aéreo</h3>
+            <p>En la actualidad contamos con una red de socios comerciales y acuerdos preferentes con la mayor parte de las
+              aérolineas a nivel global brindando un servicio eficiente y seguro para transportar todo tipo de mercancía
+              considerando cualquier dimensión.
+            </p>
+            </p>
+          </div>
+          <div class="icons small-12 medium-3 columns end">
+            <ul>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Gestión documental"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Seguro de carga internacional"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Asesoría aduanal"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Servicio directo"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Empaque & embalaje"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Etiquetado"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Carga general"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Productos perecederos"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Cargas peligrosas y un seguimiento exhaustivo del estatus de cada embarque"><i class="fa fa-user"></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img class="img-responsive picsGall" src="http://gladheimlogistics.com/images/serviciosGladheim/transporte-maritimo-Gladheim.jpg"
+            />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Transporte Marítimo</h3>
+            <p>Gladheim es especialista tanto en el transporte marítimo para carga LCL como en el FCL.</p><br />
+            <p>El transporte marítimo es ideal para aquellas cargas que precisan de un desplazamiento seguro al mínimo coste
+              y es que este tipo de transporte permite un ahorro de costes considerable, sobre todo si se utiliza el servicio
+              de carga LCL debido a que es un sistema ideal de embarque que minimiza los costes y flexibiliza las entregas
+              a los clientes.</p>
+          </div>
+          <div class="icons small-12 medium-3 columns end">
+            <ul>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Gestión documental"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Seguro de la mercancía"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Asesoría aduanal"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Recolección"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Empaque & embalaje"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte FCL & LCL"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Servicio puerta a puerta"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte a puerto y a lugar de destino"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte de carga general"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte de productos perecederos"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte de mercancía peligrosa y un seguimiento exhaustivo del estatus de cada embarque"><i class="fa fa-user"></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img class="img-responsive picsGall" src="http://gladheimlogistics.com/images/serviciosGladheim/transporte-maritimo-Gladheim.jpg"
+            />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Transporte Terrestre</h3>
+            <p>Nuestras soluciones de transporte terrestre prestan servicios de cadena de suministro de valor añadido en todo
+              el mundo diseñado para satisfacer las exigencias de sus envíos proporcionando soluciones basadas en conocimientos
+              para que su inventario siga circulando hasta llegar a su destino final.</p>
+          </div>
+          <div class="description small-12 medium-3 columns end">
+            <p>Realizamos servicios de transporte nacional e internacional a Norte America y Centro America. FTL/LTL. TLCAN
+              – cruces fronterizos para la documentación.<br /><br /> Traspaleo de carga para material no peligrosos a través
+              de las instalaciones cross dock. Carga de materiales peligrosos y experiencia en mercancías perecederas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img class="img-responsive picsGall" src="http://gladheimlogistics.com/images/serviciosGladheim/logistica-de-proyecto-Gladheim.jpg"
+            />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Logística Proyecto</h3>
+            <p>Grandes proyectos significan grandes embarques.<br /><br />Ya sea que se trata de una plataforma de perforación,
+              una planta eléctrica, un molino de papel o un gran desarrollo, diversas cargas se niegan a encajar en pequeños
+              paquetes para el transporte sencillo. Algunos son demasiado grandes, demasiado pesados, demasiado complicados
+              o simplemente demasiado especializado para ajustarse a la norma.<br /><br />Mover grandes envíos requiere habilidad,
+              experiencia y el equipo adecuado – Gladheim proporciona el músculo para sostener cualquier tipo carga proyecto.</p>
+          </div>
+          <div class="icons small-12 medium-3 columns end">
+            <ul>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Encuesta de sitio / estudio de viabilidad (rutas y tiempo)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Completo / Partes del capitulo (fletes aéreos, tiempo/ fletes marítimos)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Transporte multimodal (ferrocarril, remolcadores y barcazas de carga pesada)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Equipo de transporte especial (flat racks, open top, plataformas, soluciones tween deck)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Negociación de carga (Negociación COA, validez de tarifas a largo plazo)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Apoyo administrativo (despacho aduanal, documentación comercial)"><i class="fa fa-user"></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="services-carousel__service">
+          <div class="image small-12 medium-3 columns padding-0">
+            <img class="img-responsive picsGall" src="http://gladheimlogistics.com/images/serviciosGladheim/distribucion-y-almacenamiento-Gladheim.jpg"
+            />
+          </div>
+          <div class="description small-12 medium-4 medium-offset-1 columns">
+            <h3 class="texto-secondary">Distribución & Almacenamiento</h3>
+            <p>Operamos una variada gama de instalaciones en diferentes lugares dependiendo de las necesidades del mercado.
+              Esto incluye la configuración de la infraestructura en varios mercados en desarrollo.<br /><br /> Nuestro objetivo
+              es crear una plataforma donde los clientes tengan un entorno de almacenamiento limpio, seguro y protegido con
+              especial énfasis tanto en la higiene y la salud como en la seguridad en el entorno del almacén. <br /><br />También
+              ofrecemos todos los servicios de valor añadido necesarios a los clientes en el mismo almacén como son: etiquetado,
+              embalaje, control de calidad, preparación de lotes, dosificación y secuencia, por nombrar algunos.</p>
+          </div>
+          <div class="icons small-12 medium-3 columns end">
+            <ul>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Ropa"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="FMCG (Productos de gran consumo)"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Farmaceutica"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Electrónica"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Venta al pormenor"><i class="fa fa-user"></i></span></li>
+              <li><span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Piezas de repuesto"><i class="fa fa-user"></i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>        <!--contacto start-->
+<section id="contacto" class="contenedor-contacto">
+<div class="row">
+  <div class="space-blank cuarenta"></div>
+  <div class="space-blank cuarenta"></div>
+  <div class="small-12 medium-4 column end">
+    <h3 class="texto-secondary">¿Cómo podemos ayudarte?</h3>
+    <p class="texto-blanco">Envíanos tu solicitud y nos pondremos en contacto contigo.</p>
+  </div>
+</div>
+<div class="space-blank cuarenta"></div>
+  <div class="row">
+    <section class="small-12 medium-7 large-7 columns">
+      <form class="contenedor-contacto__contacto">
+        <div class="row">
+          <div class="input-field small-12 medium-10 large-8 column">
+            <input id="nombre" type="text" class="validate">
+            <label for="nombre">Nombre y apellidos *</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field small-12 medium-10 large-8 column">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="Formato incorrecto" data-success="Email correcto">Email *</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field small-12 medium-10 large-8 column">
+            <textarea id="comentario" class="materialize-textarea"></textarea>
+            <label for="comentario">Comentario *</label>
+          </div>
+        </div>
+        <div class="space-blank ocho"></div>
+        <p>
+          <input type="checkbox" id="test5" />
+          <label for="test5">He leído y acepto la <a>política de privacidad</a> *</label>
+        </p>
+        <div class="space-blank dieciseis"></div>
+        <div class="small-12 medium-8 large-3">
+          <button class="button expanded" type="submit">
+                                Enviar
+                            </button>
+        </div>
+      </form>
+    </section>
+    <aside class="contenedor-contacto__redes small-12 medium-5 large-4 large-offset-1 columns">
+        <a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@gladheimlogistics.com</a>
+        <a href=""><i class="fa fa-skype" aria-hidden="true"></i> gladheimlogistics</a>
+        <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a>
+    </aside>
+  </div>
+</section>
+    </div>
 </main>
 <footer class="site-footer">
-        <div id="cuatro" class="footer-base">
-            <div class="line7">
-			<div class="container">
-				<div class="row footer">
-					<div class="col-md-12">
-						<h3>Suscríbete a nuestro boletín de noticias</h3>
-						<p>Aprovecha y recibe en tu email nuestras promociones y noticias.</p>
-						<div class="fr">
-						<div style="display: inline-block;">
-                        <form  method="post" action="newsletter-esp.php" id="newsletter">
-                        <input type="email" class="col-md-6 fEmail" name='email' id='email' placeholder='Ingresa tu email'/>
-                        <input value="Suscríbete!" class="subS" id="submit" name="Submit" type="submit">
-                            </form>
-						</div>
-						</div>
-					</div>
-					<div class="soc col-md-12">
-						<ul>
-							<li class="soc1"><a href="https://www.linkedin.com/company/gladheim-logistics-s-a-de-c-v-" target="_new"></a></li><!--
-							<li class="soc2"><a href="#"></a></li>
-							<li class="soc3"><a href="#"></a></li>
-							<li class="soc4"><a href="#"></a></li>
-							<li class="soc5"><a href="#"></a></li>
-							<li class="soc6"><a href="#"></a></li>
-							<li class="soc7"><a href="#"></a></li>
-							<li class="soc8"><a href="#"></a></li>-->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="lineBlack">
-			<div class="container">
-				<div class="row downLine">
-					<div class="col-md-12 text-right">
-						<!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
-					</div>
-					<div class="col-md-6 text-left copy">
-						<p>Todos los derechos reservados por Gladheim Logistics. </p>
-					</div>
-					<div class="col-md-6 text-right dm">
-						<ul id="downMenu">
-							<li class="active" ><a href="#home">Inicio</a></li>
-							<li><a href="#nosotros">Nosotros</a></li>
-							<li><a href="#filosofia">Filosofía</a></li>
-							<li><a href="#servicios">Servicios</a></li>
-							<li class="last"><a href="#contact">Contacto</a></li>
-							<!--li><a href="#features">Features</a></li-->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-    </div>		
+  <div class="footer-base">
+    <div class="row footer-base__bloque-elementos">
+      <section class="small-12 medium-6 large-5 columns">
+        <ul class="small-12 medium-12 large-5 columns custom-list">
+          <li>
+            <h6 class="texto-bold">Gladheim Logistics</h6>
+          </li>
+          <li>
+			<a class="active" href="#inicio" title="Ir a inicio">Inicio</a>
+		</li>
+		<li>
+			<a href="#nosotros" title="Quiénes somos">Nosotros</a>
+		</li>
+		<li>
+			<a href="#filosofia" title="Nuestra filosofía">Filosofía</a>
+		</li>
+		<li>
+			<a href="#servicios" title="Nuestros servicios">Servicios</a>
+		</li>
+		<li>
+			<a href="#contacto" title="Contacta con nosotros">Contacto</a>
+		</li>
+        </ul>
+      </section>
+      <section class="small-12 medium-6 large-4 columns">
+        <div class="footer-base__contenedor-blanco">
+          <button data-target="modal-user" class="button">Suscríbete ahora</button>
+          <p>Aprovecha y recibe en tu email nuestras promociones y noticias.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div class="space-blank"></div>
+    <div class="space-line gris-claro veinte hide-for-medium"></div>
+    <section class="row">
+      <div class="footer-base__legales small-12 column">
+        <p>Gladheim Logistics 2017 - Todos los derechos reservados
+          <a href="#" title="Política de privacidad">Política de privacidad</a>
+        </p>
+      </div>
+    </section>
+  </div>
 </footer>
 <!--build:js js/main.min.js -->
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/materialize/dist/js/materialize.js"></script>
-    <script src="js/lib/owl.carousel/dist/owl.carousel.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/utilities.js"></script>
-	<script>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/materialize/dist/js/materialize.js"></script>
+<script src="js/lib/owl.carousel/dist/owl.carousel.js"></script>
+<script src="js/app.js"></script>
+<script src="js/global.js"></script>
+<script src="js/main.js"></script>
+<script src="js/utilities.js"></script>
+<script src="js/mapa.js"></script>
+<!--endbuild-->
+<script>
 			$(document).ready(function(){
 			$(".bhide").click(function(){
 				$(".hideObj").slideDown();
@@ -289,12 +690,11 @@
 				return false;
 			});
 		});		
-	</script>	
-<!--endbuild-->
+	</script>
 <script>
-(function() {
+  (function () {
     App.init();
-}());
+  }());
 </script>
 </body>
 </html>

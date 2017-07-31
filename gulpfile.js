@@ -85,7 +85,7 @@ var paths = {
       'node_modules/slick-carousel/slick/slick.js'
     ],
     jsLibFolder: 'dev/js/lib',
-    svgIcons: 'dev/images/assets/icons/*.svg',
+    svgIcons: 'dev/images/icons/*.svg',
     svgScss: '../scss/config/_icons.scss',
     svgFonts: '../fonts/',
     svgFontsDev: 'dev/fonts/',
@@ -295,7 +295,7 @@ gulp.task('copy-css', function () {
 });
 
 // ICONS SVG
-var myFontName = 'bbcicons-font';
+var myFontName = 'gladheimicons-font';
 gulp.task('iconfont', function () {
   return gulp.src([paths.dev.svgIcons])
     .pipe(iconfontCss({
@@ -303,7 +303,7 @@ gulp.task('iconfont', function () {
       targetPath: paths.dev.svgScss,
       fontPath: paths.dev.svgFonts,
       firstGlyph: 0xB001,
-      cssClass: 'bbc-icon'
+      cssClass: 'gladheim-icon'
     }))
     .pipe(iconfont({
       fontName: myFontName,

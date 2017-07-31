@@ -4,6 +4,7 @@ CARRUSEL
 
 .imagen-header {
     position: relative;
+    z-index: 0;
   }
 
 .carrusel {
@@ -126,7 +127,10 @@ CARRUSEL
                 text-shadow: none;
             }
             .owl-prev {
-                left: 25%;
+                left: calc(25% - 4px);
+            }
+            .owl-next {
+                right: 16px;
             }
         }
     }
