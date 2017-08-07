@@ -32,6 +32,11 @@ jQuery(document).ready(function($) {
     $(".side-nav__boton-sideNav").sideNav({
         closeOnClick: false
     });
+    $('.modal').modal();
+
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 0
+    });
     
     $(".side-nav__boton-sideNav").click(function () {
     $('.hamburger').toggleClass("is-active");
@@ -105,6 +110,37 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
+    $("#contactForm").submit(function(event){
+        // cancels the form submission
+        event.preventDefault();
+        submitForm();
+    });
+
+    function submitForm(){
+        // Initiate Variables With Form Content
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+    
+        $.ajax({
+            type: "POST",
+            url: "php/form-process.php",
+            data: "name=" + name + "&email=" + email + "&message=" + message,
+            success : function(text){
+                if (text == "success"){
+                    formSuccess();
+                }
+            }
+        });
+    }
+    function formSuccess(){
+        $('#mensajeEnviado').modal('open');
+        name.val('');
+        email.val('');
+        message.val('');
+    }
+
 });
 
 $(window).on('load', function() {

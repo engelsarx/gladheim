@@ -375,6 +375,13 @@ a {
         border: 1px solid $primary-color;
         font-weight: bold;
     }
+    &:focus,    
+    &:active {
+        color: $primary-color;
+        outline: none;
+        border: 1px solid #DFDFDF;
+        box-shadow: 0 4px 16px 0 rgba(37,63,74,0.3);
+    }
     &.hollow {
         border: 1px solid #DFDFDF;
         color: $primary-color;

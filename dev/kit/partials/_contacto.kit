@@ -1,5 +1,5 @@
 <!--contacto start-->
-<section id="contacto" class="contenedor-contacto">
+<section id="contacto" class="contenedor-contacto scrollspy">
 <div class="row">
   <div class="space-blank cuarenta"></div>
   <div class="space-blank cuarenta"></div>
@@ -11,35 +11,33 @@
 <div class="space-blank cuarenta"></div>
   <div class="row">
     <section class="small-12 medium-7 large-7 columns">
-      <form class="contenedor-contacto__contacto">
+      <form role="form" id="contactForm" data-toggle="validator" class="contenedor-contacto__contacto">
         <div class="row">
           <div class="input-field small-12 medium-10 large-8 column">
-            <input id="nombre" type="text" class="validate">
-            <label for="nombre">Nombre y apellidos *</label>
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="" required data-error="NEW ERROR MESSAGE">
           </div>
         </div>
         <div class="row">
           <div class="input-field small-12 medium-10 large-8 column">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="Formato incorrecto" data-success="Email correcto">Email *</label>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="" required>
           </div>
         </div>
         <div class="row">
           <div class="input-field small-12 medium-10 large-8 column">
-            <textarea id="comentario" class="materialize-textarea"></textarea>
-            <label for="comentario">Comentario *</label>
+            <label for="message">Mensaje</label>
+            <textarea id="message" class="form-control materialize-textarea" rows="5" placeholder="" required></textarea>
           </div>
         </div>
         <div class="space-blank ocho"></div>
-        <p>
-          <input type="checkbox" id="test5" />
-          <label for="test5">He leído y acepto la <a>política de privacidad</a> *</label>
-        </p>
+        <!-- <p>
+          <input type="checkbox" id="politica" />
+          <label for="politica">He leído y acepto la <a>política de privacidad</a> *</label>
+        </p> -->
         <div class="space-blank dieciseis"></div>
         <div class="small-12 medium-8 large-3">
-          <button class="button expanded" type="submit">
-                                Enviar
-                            </button>
+          <button type="submit" id="form-submit" class="button expanded">Enviar</button>
         </div>
       </form>
     </section>
@@ -50,3 +48,15 @@
     </aside>
   </div>
 </section>
+ <div id="mensajeEnviado" class="modal">
+   <div class="row text-center">
+    <div class="small-12 modal-content column">
+      <h4 class="texto-primary">¡Gracias por ponerte en contacto con nosotros!</h4>
+      <p>Tu mensaje ha sido enviado, a la brevedad nos comunicaremos contigo</p>
+    </div>
+    <div class="clear"></div>
+    <div class="modal-footer text-center">
+      <a href="#!" class="modal-action modal-close button">De acuerdo</a>
+    </div>
+   </div>
+  </div>
