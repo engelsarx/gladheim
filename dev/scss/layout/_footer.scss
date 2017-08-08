@@ -62,4 +62,12 @@ footer {
             border-bottom: 1px solid $secondary-color;
         }
     }
+    .input-field {
+        input {
+            border-color: $primary-color;
+            &::placeholder {
+                color: $primary-color;
+            }
+        }
+    }
 }

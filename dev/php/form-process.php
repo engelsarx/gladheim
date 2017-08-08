@@ -18,7 +18,7 @@ if (empty($_POST["message"])) {
 } else {
     $message = $_POST["message"];
 }
-$EmailTo = "engelsarx@gmail.com";
+$EmailTo = "gibran.alegria@gladheimlogistics.com";
 $Subject = "Mensaje del sitio Gladheim";
 // prepare email body text
 $Body = "";
