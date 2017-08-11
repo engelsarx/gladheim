@@ -77,8 +77,10 @@ jQuery(document).ready(function($) {
                 dots: false,
                 loop: true,
                 stagePadding: 0,
-                autoplay: false,
-                mouseDrag: false
+                autoplay: true,
+                mouseDrag: false,
+                autoplayTimeout: 6000,
+                autoplaySpeed: 900,
             }
         }
     });
